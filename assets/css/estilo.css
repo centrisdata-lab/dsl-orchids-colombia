@@ -3,8 +3,8 @@
 :root{
   --bg:#F7F2EA; --surface:#FFFDF9; --surface-2:#F0E8DB; --line:#E3D8C6;
   --ink:#1D1626; --ink-2:#5C5266; --ink-3:#857B8F;
-  --accent:#4B2A82; --accent-soft:#EFE8F7;
-  --saffron:#E38B35; --saffron-ink:#A85A16; --saffron-soft:#FBECDC;
+  --accent:#5A3694; --accent-soft:#EFE8F7;
+  --saffron:#ED943C; --saffron-ink:#A85A16; --saffron-soft:#FBECDC;
   --ok:#2C6A4C; --ok-soft:#E3F1E9; --warn:#8F5410; --warn-soft:#FBEFDC; --bad:#A12F29; --bad-soft:#F9E3E1;
   --night:#22163A; --on-night:#F7F2EA; --on-night-2:#CBB8EC;
   --display:"Cormorant Garamond", Georgia, "Times New Roman", serif;
@@ -131,7 +131,7 @@ td.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 .sw p{padding:10px 12px;font-size:.8rem;color:var(--ink-2)}
 .sw p b{display:block;color:var(--ink);font-size:.9rem}
 .option{position:relative}
-.option .badge{position:absolute;top:14px;left:14px;font-family:var(--display);font-size:1.6rem;font-weight:600;color:#4B2A82;background:#FFFFFF;border:1px solid #E3D8C6;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.option .badge{position:absolute;top:14px;left:14px;font-family:var(--display);font-size:1.6rem;font-weight:600;color:#5A3694;background:#FFFFFF;border:1px solid #E3D8C6;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center}
 
 footer{padding-block:44px 70px;color:var(--ink-3);font-size:.86rem}
 footer .wrap{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
@@ -161,3 +161,5 @@ dialog p{color:#F3EDF8;text-align:center;font-size:.88rem;margin:8px auto 0}
 /* Tablas y tarjetas dentro de franjas oscuras conservan su texto oscuro */
 .band .tbl,.band .card{color:var(--ink)}
 .band .tbl .muted,.band .card .muted{color:var(--ink-2)}
+
+.alert.alert-ok{background:var(--ok-soft);border-color:var(--ok)} .alert.alert-ok b{color:var(--ok)}
