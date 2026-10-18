@@ -2,7 +2,7 @@
    Layout: documento editorial con navegación fija; secciones que alternan marfil y violeta noche. */
 :root{
   --bg:#F7F2EA; --surface:#FFFDF9; --surface-2:#F0E8DB; --line:#E3D8C6;
-  --ink:#1D1626; --ink-2:#5C5266; --ink-3:#857B8F;
+  --ink:#1D1626; --ink-2:#5C5266; --ink-3:#6B6175;
   --accent:#5A3694; --accent-soft:#EFE8F7;
   --saffron:#ED943C; --saffron-ink:#A85A16; --saffron-soft:#FBECDC;
   --ok:#2C6A4C; --ok-soft:#E3F1E9; --warn:#8F5410; --warn-soft:#FBEFDC; --bad:#A12F29; --bad-soft:#F9E3E1;
@@ -58,7 +58,8 @@ section{padding-block:76px;border-bottom:1px solid var(--line)}
 /* Portada */
 .hero{position:relative;isolation:isolate;overflow:hidden;background:var(--night);color:var(--on-night)}
 .hero > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:65% center;z-index:-2;opacity:.85}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(34,22,58,.96) 0%,rgba(34,22,58,.78) 45%,rgba(34,22,58,.2) 100%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(34,22,58,.96) 0%,rgba(34,22,58,.86) 50%,rgba(34,22,58,.4) 100%)}
+@media (max-width:760px){.hero::after{background:linear-gradient(180deg,rgba(34,22,58,.9) 0%,rgba(34,22,58,.84) 100%)}}
 .hero .wrap{padding-block:92px 96px;display:flex;flex-direction:column;gap:22px}
 .hero .eyebrow{color:var(--saffron)}
 .hero .lead{color:var(--on-night-2);max-width:56ch}
@@ -163,3 +164,20 @@ dialog p{color:#F3EDF8;text-align:center;font-size:.88rem;margin:8px auto 0}
 .band .tbl .muted,.band .card .muted{color:var(--ink-2)}
 
 .alert.alert-ok{background:var(--ok-soft);border-color:var(--ok)} .alert.alert-ok b{color:var(--ok)}
+
+/* Celular: menú sin pestañas cortadas y tablas como fichas apiladas (sin desplazamiento lateral) */
+@media (max-width:560px){
+  .nav .wrap{gap:10px}
+  .nav ul{gap:2px}
+  .nav a.tab{padding:6px 7px;font-size:.76rem}
+}
+@media (max-width:600px){
+  .tbl{overflow-x:visible}
+  .tbl table,.tbl tbody,.tbl tr,.tbl td{display:block;width:100%}
+  .tbl thead{display:none}
+  .tbl tr{padding:12px 14px;border-bottom:1px solid var(--line)}
+  .tbl tr:last-child{border-bottom:0}
+  .tbl td{padding:3px 0;border:0;text-align:left}
+  .tbl td:first-child{font-weight:600}
+  .tbl td.n{text-align:left;white-space:normal}
+}
