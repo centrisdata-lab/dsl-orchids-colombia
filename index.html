@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>DSL Orchids Colombia · Propuesta</title>
+<link rel="icon" href="assets/marca/avatar-violeta.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/estilo.css">
+<style>
+  .doors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .door{display:flex;flex-direction:column;gap:12px;padding:28px;border:1px solid var(--line);border-radius:20px;background:var(--surface);text-decoration:none;color:var(--ink);transition:border-color .2s, transform .2s}
+  .door:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .door .go{margin-top:auto;font-weight:700;color:var(--accent)}
+  @media (prefers-reduced-motion:reduce){.door{transition:none}.door:hover{transform:none}}
+  @media (max-width:900px){.doors{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <img src="assets/img/hero-orquidea.jpg" alt="">
+  <div class="wrap">
+    <img src="assets/marca/logo-horizontal-fondo-oscuro.svg" alt="DSL Orchids Colombia" style="height:48px;width:auto;align-self:flex-start">
+    <p class="eyebrow">Propuesta · octubre de 2026</p>
+    <h1>DSL Orchids <em>Colombia</em></h1>
+    <p class="lead">Tres documentos para revisar: la plataforma de venta y operación, la nueva identidad de marca y lo que se necesita para operar en Colombia.</p>
+  </div>
+</header>
+<section>
+  <div class="wrap doors">
+    <a class="door" href="web/"><span class="eyebrow">Plataforma</span><h2 style="font-size:2rem">Tienda y panel</h2><p class="muted">Recorrido de la experiencia del cliente y de las herramientas del equipo.</p><span class="go">Ver recorrido →</span></a>
+    <a class="door" href="marca/"><span class="eyebrow">Fase 1 · para aprobación</span><h2 style="font-size:2rem">Identidad de marca</h2><p class="muted">Logotipo, versiones, colores, tipografía y opciones de sello.</p><span class="go">Ver identidad →</span></a>
+    <a class="door" href="operacion/"><span class="eyebrow">Operación</span><h2 style="font-size:2rem">Qué se necesita</h2><p class="muted">Empresa, importación, bodega, transportadoras, pagos y legal.</p><span class="go">Ver requisitos →</span></a>
+  </div>
+</section>
+</body>
+</html>
