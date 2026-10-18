@@ -4,38 +4,55 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>DSL Orchids Colombia · Propuesta</title>
+<title>DSL Orchids Colombia</title>
 <link rel="icon" href="assets/marca/avatar-violeta.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="assets/css/estilo.css">
 <style>
-  .doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-  .door{display:flex;flex-direction:column;gap:12px;padding:28px;border:1px solid var(--line);border-radius:20px;background:var(--surface);text-decoration:none;color:var(--ink);transition:border-color .2s, transform .2s}
-  .door:hover{border-color:var(--accent);transform:translateY(-2px)}
-  .door .go{margin-top:auto;font-weight:700;color:var(--accent)}
-  @media (prefers-reduced-motion:reduce){.door{transition:none}.door:hover{transform:none}}
-  @media (max-width:900px){.doors{grid-template-columns:1fr}}
+  .portada{min-height:100svh;display:flex;flex-direction:column;justify-content:center}
+  .portada .wrap{display:flex;flex-direction:column;gap:22px;max-width:760px}
+  .botones{display:flex;flex-direction:column;gap:14px;margin-top:10px}
+  .boton{display:flex;align-items:center;gap:18px;padding:20px 24px;border-radius:18px;text-decoration:none;
+    background:rgba(250,246,240,.96);color:#22163a;border:1px solid rgba(255,255,255,.4);transition:transform .2s, box-shadow .2s}
+  .boton:hover{transform:translateY(-2px);box-shadow:0 16px 40px -18px rgba(0,0,0,.6)}
+  .boton:focus-visible{outline:3px solid #ED943C;outline-offset:3px}
+  .boton .num{flex:none;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#4B2C83;color:#FAF6F0;
+    font-family:"Cormorant Garamond",Georgia,serif;font-size:1.5rem;font-weight:600}
+  .boton .txt{display:flex;flex-direction:column;gap:2px;min-width:0}
+  .boton b{font-size:1.15rem}
+  .boton small{color:#5d5470;font-size:.92rem;line-height:1.35}
+  .boton .flecha{margin-left:auto;flex:none;font-size:1.4rem;color:#4B2C83}
+  @media (prefers-reduced-motion:reduce){.boton{transition:none}.boton:hover{transform:none}}
+  @media (max-width:520px){.boton{padding:16px 16px;gap:14px}.boton .num{width:40px;height:40px;font-size:1.3rem}.boton b{font-size:1.05rem}}
 </style>
 </head>
 <body>
-<header class="hero">
+<header class="hero portada">
   <img src="assets/img/hero-orquidea.jpg" alt="">
   <div class="wrap">
-    <img src="assets/marca/logo-horizontal-fondo-oscuro.svg" alt="DSL Orchids Colombia" style="height:48px;width:auto;align-self:flex-start">
-    <p class="eyebrow">Propuesta · octubre de 2026</p>
+    <img src="assets/marca/logo-horizontal-fondo-oscuro.svg" alt="DSL Orchids Colombia" style="height:52px;width:auto;align-self:flex-start">
     <h1>DSL Orchids <em>Colombia</em></h1>
-    <p class="lead">La tienda en vivo, el recorrido de la plataforma, la nueva identidad de marca y lo que se necesita para operar en Colombia.</p>
+    <p class="lead">Aquí están la tienda en línea, el nuevo logo y la guía de cómo funcionaría la operación en Colombia desde Medellín.</p>
+    <nav class="botones" aria-label="Enlaces del proyecto">
+      <a class="boton" href="https://dsl-orchids-colombia.vercel.app" target="_blank" rel="noopener">
+        <span class="num">1</span>
+        <span class="txt"><b>Ver la tienda en línea</b><small>Navéguela como la vería un cliente. Precios y existencias son de demostración.</small></span>
+        <span class="flecha" aria-hidden="true">→</span>
+      </a>
+      <a class="boton" href="marca/">
+        <span class="num">2</span>
+        <span class="txt"><b>Ver el nuevo logo</b><small>Logotipo, versiones, colores, tipografía y opciones de sello, para aprobación.</small></span>
+        <span class="flecha" aria-hidden="true">→</span>
+      </a>
+      <a class="boton" href="operacion/">
+        <span class="num">3</span>
+        <span class="txt"><b>Ver la logística en Colombia</b><small>Importación, bodega en Medellín, transportadoras, pagos, facturación y trámites.</small></span>
+        <span class="flecha" aria-hidden="true">→</span>
+      </a>
+    </nav>
   </div>
 </header>
-<section>
-  <div class="wrap doors">
-    <a class="door" href="https://dsl-orchids-colombia.vercel.app" target="_blank" rel="noopener"><span class="eyebrow">En vivo</span><h2 style="font-size:2rem">La tienda</h2><p class="muted">Navéguela como la vería un cliente, con datos de demostración.</p><span class="go">Abrir la tienda →</span></a>
-    <a class="door" href="web/"><span class="eyebrow">Plataforma</span><h2 style="font-size:2rem">Recorrido guiado</h2><p class="muted">La experiencia del cliente y las herramientas del equipo, paso a paso.</p><span class="go">Ver recorrido →</span></a>
-    <a class="door" href="marca/"><span class="eyebrow">Fase 1 · para aprobación</span><h2 style="font-size:2rem">Identidad de marca</h2><p class="muted">Logotipo, versiones, colores, tipografía y opciones de sello.</p><span class="go">Ver identidad →</span></a>
-    <a class="door" href="operacion/"><span class="eyebrow">Operación</span><h2 style="font-size:2rem">Qué se necesita</h2><p class="muted">Empresa, importación, bodega, transportadoras, pagos y legal.</p><span class="go">Ver requisitos →</span></a>
-  </div>
-</section>
 </body>
 </html>
