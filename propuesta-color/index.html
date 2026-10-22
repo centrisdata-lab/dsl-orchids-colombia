@@ -38,7 +38,12 @@
   h2{font-size:2.3rem} h3{font-size:1.35rem}
   .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
   .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-  .grid-2>*,.grid-3>*{min-width:0}
+  .grid-2>*,.grid-3>*,.cols>*{min-width:0}
+  .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  .tag{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:.9rem}
+  .tag i{width:12px;height:12px;border-radius:50%;display:inline-block}
+  .row-title{font-weight:800;margin:22px 0 10px;font-size:1rem}
+  .card.actual{background:#F6F2F7;border-style:dashed}
   .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:12px}
   .opt-title{display:flex;align-items:center;gap:12px}
   .opt-title .badge{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;color:#fff;font-family:var(--display);font-size:1.4rem;font-weight:600}
@@ -63,7 +68,7 @@
   .toggle button[aria-pressed=true]{background:var(--ink);color:#fff}
   a.pdf{font-weight:700;color:var(--a)}
   footer{padding-block:30px;color:var(--ink2);font-size:.86rem}
-  @media (max-width:900px){header.top .wrap,.grid-2{grid-template-columns:1fr}.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}.compare{grid-template-columns:repeat(3,minmax(0,1fr))}.compare .lbl{grid-column:1/-1}}
+  @media (max-width:900px){header.top .wrap,.grid-2,.cols{grid-template-columns:1fr}.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}.compare{grid-template-columns:repeat(3,minmax(0,1fr))}.compare .lbl{grid-column:1/-1}}
   @media (max-width:520px){.grid-3,.compare{grid-template-columns:1fr}header.top h1{font-size:2.5rem}.ref{grid-template-columns:96px 1fr}.ref img{width:96px;height:96px}h2{font-size:1.9rem}}
 </style>
 </head>
@@ -101,7 +106,17 @@
       <h2>Las dos opciones</h2>
       <p class="muted">Cada una tiene un tono para la flor, uno más profundo para los textos y uno para los fondos de color. Los fondos son mucho más claros que el violeta noche actual.</p>
     </div>
-    <div class="grid-2">
+    <div class="cols">
+      <div class="card actual">
+        <div class="opt-title"><span class="badge" style="background:#5A3694">·</span><div><h3>Actual</h3><p class="muted" style="font-size:.9rem">Violeta profundo y fondos violeta noche.</p></div></div>
+        <div class="swatches">
+          <div class="sw"><i style="background:#5A3694"></i>Flor<br>#5A3694</div>
+          <div class="sw"><i style="background:#5A3694"></i>Textos<br>#5A3694</div>
+          <div class="sw"><i style="background:#22163A"></i>Fondos<br>#22163A</div>
+          <div class="sw"><i style="background:#CBB8EC"></i>Lila claro<br>#CBB8EC</div>
+          <div class="sw"><i style="background:#ED943C"></i>Naranja<br>#ED943C</div>
+        </div>
+      </div>
       <div class="card">
         <div class="opt-title"><span class="badge" style="background:var(--a)">A</span><div><h3>Lila orquídea</h3><p class="muted" style="font-size:.9rem">La más cercana al pétalo de la foto. Cálida, con un toque rosado.</p></div></div>
         <div class="swatches">
@@ -141,7 +156,7 @@
       <span class="lbl">Actual</span>
       <div class="tile"><img src="img/actual-logo-vertical-color.svg" alt="Logo actual en violeta"></div>
       <div class="tile dark" style="background:#22163A"><img src="img/actual-logo-vertical-fondo-oscuro.svg" alt="Logo actual sobre violeta noche"></div>
-      <div class="tile"><img src="img/actual-sello-a-medalla.svg" alt="Sello actual"></div>
+      <div class="tile"><img src="img/actual-logo-horizontal-color.svg" alt="Logo horizontal actual"></div>
 
       <span class="lbl">Opción A</span>
       <div class="tile"><img data-logo="a-lila-orquidea-logo-vertical-color" src="img/a-lila-orquidea-logo-vertical-color-internacional.svg" alt="Logo opción A sobre blanco"></div>
@@ -157,16 +172,18 @@
     <div class="grid-2" style="margin-top:24px">
       <div class="card">
         <h3>La idea de la flor en contorno</h3>
-        <p class="muted" style="font-size:.92rem">Lo que propusieron en la reunión: sobre fondo blanco, la flor blanca con solo las líneas en color. Sirve para papelería, empaques claros o un sello sutil.</p>
-        <div class="grid-2">
+        <p class="muted" style="font-size:.92rem">Lo que propusieron en la reunión: sobre fondo blanco, la flor blanca con solo las líneas en color. Sirve para papelería, empaques claros o un sello sutil. Primero va la flor actual, después A y B.</p>
+        <div class="grid-3">
+          <div class="tile"><img src="img/actual-isotipo-color.svg" alt="Flor actual, sólida"></div>
           <div class="tile"><img src="img/a-lila-orquidea-isotipo-contorno.svg" alt="Flor en contorno, opción A"></div>
           <div class="tile"><img src="img/b-lavanda-isotipo-contorno.svg" alt="Flor en contorno, opción B"></div>
         </div>
       </div>
       <div class="card">
         <h3>Ícono para redes y la pestaña del navegador</h3>
-        <p class="muted" style="font-size:.92rem">La flor sola sobre un círculo, para Instagram, Facebook, WhatsApp y el ícono de la página.</p>
-        <div class="grid-2">
+        <p class="muted" style="font-size:.92rem">La flor sola sobre un círculo, para Instagram, Facebook, WhatsApp y el ícono de la página. Actual, A y B.</p>
+        <div class="grid-3">
+          <div class="tile"><img src="img/actual-avatar.svg" alt="Ícono actual" style="max-height:120px"></div>
           <div class="tile"><img src="img/a-lila-orquidea-avatar.svg" alt="Ícono opción A" style="max-height:120px"></div>
           <div class="tile"><img src="img/b-lavanda-avatar.svg" alt="Ícono opción B" style="max-height:120px"></div>
         </div>
@@ -182,23 +199,19 @@
       <h2>La medalla en los nuevos colores</h2>
       <p class="muted">Con el nombre internacional. Se usa el color que mejor contraste con cada caja.</p>
     </div>
-    <div class="grid-2">
-      <div class="card">
-        <h3>Opción A · Lila orquídea</h3>
-        <div class="grid-3">
-          <div class="tile"><img src="img/a-lila-orquidea-sello-color.svg" alt="Sello lila"></div>
-          <div class="tile"><img src="img/a-lila-orquidea-sello-marfil.svg" alt="Sello marfil"></div>
-          <div class="tile"><img src="img/a-lila-orquidea-sello-oscuro.svg" alt="Sello de fondo profundo"></div>
-        </div>
-      </div>
-      <div class="card">
-        <h3>Opción B · Lavanda</h3>
-        <div class="grid-3">
-          <div class="tile"><img src="img/b-lavanda-sello-color.svg" alt="Sello lavanda"></div>
-          <div class="tile"><img src="img/b-lavanda-sello-marfil.svg" alt="Sello marfil"></div>
-          <div class="tile"><img src="img/b-lavanda-sello-oscuro.svg" alt="Sello de fondo profundo"></div>
-        </div>
-      </div>
+    <div class="compare">
+      <span class="lbl">Actual</span>
+      <div class="tile"><img src="img/actual-sello-a-medalla.svg" alt="Sello Actual, color principal"></div>
+      <div class="tile"><img src="img/actual-sello-a-medalla-marfil.svg" alt="Sello Actual, marfil"></div>
+      <div class="tile"><img src="img/actual-sello-a-medalla-noche.svg" alt="Sello Actual, fondo profundo"></div>
+      <span class="lbl">Opción A</span>
+      <div class="tile"><img src="img/a-lila-orquidea-sello-color.svg" alt="Sello Opción A, color principal"></div>
+      <div class="tile"><img src="img/a-lila-orquidea-sello-marfil.svg" alt="Sello Opción A, marfil"></div>
+      <div class="tile"><img src="img/a-lila-orquidea-sello-oscuro.svg" alt="Sello Opción A, fondo profundo"></div>
+      <span class="lbl">Opción B</span>
+      <div class="tile"><img src="img/b-lavanda-sello-color.svg" alt="Sello Opción B, color principal"></div>
+      <div class="tile"><img src="img/b-lavanda-sello-marfil.svg" alt="Sello Opción B, marfil"></div>
+      <div class="tile"><img src="img/b-lavanda-sello-oscuro.svg" alt="Sello Opción B, fondo profundo"></div>
     </div>
   </div>
 </section>
@@ -210,7 +223,12 @@
       <h2>Una tarjeta para los dos países</h2>
       <p class="muted">Dice DSL Orchids, sin "Colombia". Lleva el teléfono de Colombia y el de Estados Unidos, sin dirección, y el código QR abre la página web.</p>
     </div>
-    <div class="grid-2">
+    <div class="cols">
+      <div class="card actual">
+        <h3>Actual</h3>
+        <figure><img class="shot" src="img/actual-tarjeta-frente.jpg" alt="Frente de la tarjeta actual sobre violeta noche" loading="lazy"><figcaption>Frente</figcaption></figure>
+        <figure><img class="shot" src="img/actual-tarjeta-reverso.jpg" alt="Reverso de la tarjeta actual con un teléfono y QR a WhatsApp" loading="lazy"><figcaption>Reverso · dice "DSL Orchids Colombia", un teléfono y QR a WhatsApp</figcaption></figure>
+      </div>
       <div class="card">
         <h3>Opción A · Lila orquídea</h3>
         <figure><img class="shot" src="img/a-lila-orquidea-tarjeta-frente.jpg" alt="Frente de la tarjeta opción A con el logo sobre lila profundo" loading="lazy"><figcaption>Frente</figcaption></figure>
@@ -230,17 +248,31 @@
     <div class="sec-head">
       <p class="eyebrow">Tienda y panel</p>
       <h2>Así se vería la tienda</h2>
-      <p class="muted">Vista previa de la tienda con cada opción aplicada. El inicio queda mucho más luminoso.</p>
+      <p class="muted">La tienda como está hoy, junto a cada opción aplicada. El inicio queda mucho más luminoso. Toque una captura para verla en grande.</p>
     </div>
-    <div class="grid-2">
-      <figure><img class="shot" src="img/a-lila-orquidea-web-inicio.jpg" alt="Inicio de la tienda con la opción A" loading="lazy"><figcaption><b>Opción A</b> · Inicio</figcaption></figure>
-      <figure><img class="shot" src="img/b-lavanda-web-inicio.jpg" alt="Inicio de la tienda con la opción B" loading="lazy"><figcaption><b>Opción B</b> · Inicio</figcaption></figure>
-      <figure><img class="shot" src="img/a-lila-orquidea-web-segmentos.jpg" alt="Sección para negocios con la opción A" loading="lazy"><figcaption><b>Opción A</b> · Sección para negocios</figcaption></figure>
-      <figure><img class="shot" src="img/b-lavanda-web-segmentos.jpg" alt="Sección para negocios con la opción B" loading="lazy"><figcaption><b>Opción B</b> · Sección para negocios</figcaption></figure>
-      <figure><img class="shot" src="img/a-lila-orquidea-web-ficha.jpg" alt="Ficha de producto con la opción A" loading="lazy"><figcaption><b>Opción A</b> · Ficha de producto</figcaption></figure>
-      <figure><img class="shot" src="img/b-lavanda-web-ficha.jpg" alt="Ficha de producto con la opción B" loading="lazy"><figcaption><b>Opción B</b> · Ficha de producto</figcaption></figure>
-      <figure><img class="shot" src="img/a-lila-orquidea-web-panel.jpg" alt="Panel de administración con la opción A" loading="lazy"><figcaption><b>Opción A</b> · Panel de administración</figcaption></figure>
-      <figure><img class="shot" src="img/b-lavanda-web-panel.jpg" alt="Panel de administración con la opción B" loading="lazy"><figcaption><b>Opción B</b> · Panel de administración</figcaption></figure>
+    <p class="row-title">Inicio</p>
+    <div class="cols">
+      <figure><a href="img/actual-web-inicio.jpg" target="_blank" rel="noopener" aria-label="Ver captura en grande"><img class="shot" src="img/actual-web-inicio.jpg" alt="Inicio, versión actual" loading="lazy"></a><figcaption><span class="tag"><i style="background:#5A3694"></i>Actual</span></figcaption></figure>
+      <figure><a href="img/a-lila-orquidea-web-inicio.jpg" target="_blank" rel="noopener" aria-label="Ver captura en grande"><img class="shot" src="img/a-lila-orquidea-web-inicio.jpg" alt="Inicio, opción A" loading="lazy"></a><figcaption><span class="tag"><i style="background:#B47CC7"></i>Opción A · Lila orquídea</span></figcaption></figure>
+      <figure><a href="img/b-lavanda-web-inicio.jpg" target="_blank" rel="noopener" aria-label="Ver captura en grande"><img class="shot" src="img/b-lavanda-web-inicio.jpg" alt="Inicio, opción B" loading="lazy"></a><figcaption><span class="tag"><i style="background:#A88BD3"></i>Opción B · Lavanda</span></figcaption></figure>
+    </div>
+    <p class="row-title">Sección para negocios</p>
+    <div class="cols">
+      <figure><a href="img/actual-web-segmentos.jpg" target="_blank" rel="noopener" aria-label="Ver captura en grande"><img class="shot" src="img/actual-web-segmentos.jpg" alt="Sección para negocios, versión actual" loading="lazy"></a><figcaption><span class="tag"><i style="background:#5A3694"></i>Actual</span></figcaption></figure>
+      <figure><a href="img/a-lila-orquidea-web-segmentos.jpg" target="_blank" rel="noopener" aria-label="Ver captura en grande"><img class="shot" src="img/a-lila-orquidea-web-segmentos.jpg" alt="Sección para negocios, opción A" loading="lazy"></a><figcaption><span class="tag"><i style="background:#B47CC7"></i>Opción A · Lila orquídea</span></figcaption></figure>
+      <figure><a href="img/b-lavanda-web-segmentos.jpg" target="_blank" rel="noopener" aria-label="Ver captura en grande"><img class="shot" src="img/b-lavanda-web-segmentos.jpg" alt="Sección para negocios, opción B" loading="lazy"></a><figcaption><span class="tag"><i style="background:#A88BD3"></i>Opción B · Lavanda</span></figcaption></figure>
+    </div>
+    <p class="row-title">Ficha de producto</p>
+    <div class="cols">
+      <figure><a href="img/actual-web-ficha.jpg" target="_blank" rel="noopener" aria-label="Ver captura en grande"><img class="shot" src="img/actual-web-ficha.jpg" alt="Ficha de producto, versión actual" loading="lazy"></a><figcaption><span class="tag"><i style="background:#5A3694"></i>Actual</span></figcaption></figure>
+      <figure><a href="img/a-lila-orquidea-web-ficha.jpg" target="_blank" rel="noopener" aria-label="Ver captura en grande"><img class="shot" src="img/a-lila-orquidea-web-ficha.jpg" alt="Ficha de producto, opción A" loading="lazy"></a><figcaption><span class="tag"><i style="background:#B47CC7"></i>Opción A · Lila orquídea</span></figcaption></figure>
+      <figure><a href="img/b-lavanda-web-ficha.jpg" target="_blank" rel="noopener" aria-label="Ver captura en grande"><img class="shot" src="img/b-lavanda-web-ficha.jpg" alt="Ficha de producto, opción B" loading="lazy"></a><figcaption><span class="tag"><i style="background:#A88BD3"></i>Opción B · Lavanda</span></figcaption></figure>
+    </div>
+    <p class="row-title">Panel de administración</p>
+    <div class="cols">
+      <figure><a href="img/actual-web-panel.jpg" target="_blank" rel="noopener" aria-label="Ver captura en grande"><img class="shot" src="img/actual-web-panel.jpg" alt="Panel de administración, versión actual" loading="lazy"></a><figcaption><span class="tag"><i style="background:#5A3694"></i>Actual</span></figcaption></figure>
+      <figure><a href="img/a-lila-orquidea-web-panel.jpg" target="_blank" rel="noopener" aria-label="Ver captura en grande"><img class="shot" src="img/a-lila-orquidea-web-panel.jpg" alt="Panel de administración, opción A" loading="lazy"></a><figcaption><span class="tag"><i style="background:#B47CC7"></i>Opción A · Lila orquídea</span></figcaption></figure>
+      <figure><a href="img/b-lavanda-web-panel.jpg" target="_blank" rel="noopener" aria-label="Ver captura en grande"><img class="shot" src="img/b-lavanda-web-panel.jpg" alt="Panel de administración, opción B" loading="lazy"></a><figcaption><span class="tag"><i style="background:#A88BD3"></i>Opción B · Lavanda</span></figcaption></figure>
     </div>
   </div>
 </section>
