@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Propuesta de color · DSL Orchids</title>
+<meta name="description" content="Dos opciones de color más claras para el logo, la tarjeta y la tienda, a partir de la orquídea lila.">
+<link rel="icon" href="img/a-lila-orquidea-avatar.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+  :root{--bg:#FAF6F1;--surface:#FFFFFF;--line:#E9DFD3;--ink:#2A2033;--ink2:#5C5266;--ink3:#6B6175;--naranja:#ED943C;--naranja-hondo:#A85A16;
+    --a:#7B4A90;--a-oscuro:#5A3D6E;--a-petalo:#B47CC7;--b:#6B56A3;--b-oscuro:#4A3F6B;--b-petalo:#A88BD3;
+    --display:"Cormorant Garamond",Georgia,serif;--body:"Manrope",system-ui,sans-serif;color-scheme:light}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+  h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;margin:0;text-wrap:balance}
+  p{margin:0}
+  .wrap{max-width:1180px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+  .eyebrow{font-size:.74rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--naranja-hondo)}
+  .muted{color:var(--ink2)}
+  header.top{background:linear-gradient(120deg,#5A3D6E,#7B4A90 60%,#B47CC7);color:#fff;padding-block:54px 46px}
+  header.top .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:36px;align-items:center}
+  header.top h1{font-size:3.3rem;color:#fff} header.top h1 em{color:#F1E3F6;font-weight:500}
+  header.top .lead{margin-top:14px;max-width:58ch;color:#F7EEFA}
+  header.top .eyebrow{color:#FFD9B3}
+  .ref{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:18px;padding:14px}
+  .ref img{width:150px;height:150px;border-radius:12px;object-fit:cover;display:block}
+  .ref b{display:block;font-size:.95rem} .ref span{font-size:.88rem;color:#F7EEFA}
+  nav.toc{position:sticky;top:0;z-index:10;background:rgba(250,246,241,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav.toc .wrap{display:flex;gap:4px;overflow-x:auto;padding-block:10px;scrollbar-width:none}
+  nav.toc a{white-space:nowrap;text-decoration:none;font-size:.84rem;font-weight:700;color:var(--ink2);padding:7px 12px;border-radius:999px}
+  nav.toc a:hover{background:#F1E9F5;color:var(--a)}
+  section{padding-block:56px;border-bottom:1px solid var(--line)}
+  .sec-head{display:grid;gap:8px;margin-bottom:26px;max-width:70ch}
+  h2{font-size:2.3rem} h3{font-size:1.35rem}
+  .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  .grid-2>*,.grid-3>*{min-width:0}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:12px}
+  .opt-title{display:flex;align-items:center;gap:12px}
+  .opt-title .badge{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;color:#fff;font-family:var(--display);font-size:1.4rem;font-weight:600}
+  .swatches{display:flex;gap:8px;flex-wrap:wrap}
+  .sw{display:flex;flex-direction:column;gap:4px;font-size:.74rem;color:var(--ink2);font-weight:600}
+  .sw i{display:block;width:64px;height:44px;border-radius:10px;border:1px solid rgba(0,0,0,.06)}
+  .tile{background:var(--surface);border:1px solid var(--line);border-radius:14px;display:flex;align-items:center;justify-content:center;padding:18px;min-height:170px}
+  .tile img{max-width:100%;max-height:150px}
+  .tile.dark{border-color:transparent}
+  figure{margin:0;display:flex;flex-direction:column;gap:8px}
+  figcaption{font-size:.86rem;color:var(--ink2)}
+  .shot{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line);box-shadow:0 14px 34px -24px rgba(42,32,51,.5)}
+  .compare{display:grid;grid-template-columns:120px repeat(3,minmax(0,1fr));gap:14px;align-items:center}
+  .compare>*{min-width:0}
+  .compare .lbl{font-weight:800;font-size:.9rem}
+  .check{display:grid;gap:10px}
+  .check div{display:grid;grid-template-columns:28px 1fr;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .check span.n{font-family:var(--display);font-size:1.4rem;line-height:1;color:var(--naranja-hondo);font-weight:600}
+  .note{border-left:4px solid var(--naranja);background:var(--surface);border-radius:0 12px 12px 0;padding:14px 18px}
+  .toggle{justify-self:start;display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:4px;background:#fff;gap:4px}
+  .toggle button{border:0;background:transparent;border-radius:999px;padding:8px 14px;font:inherit;font-size:.84rem;font-weight:700;color:var(--ink2);cursor:pointer;min-height:36px}
+  .toggle button[aria-pressed=true]{background:var(--ink);color:#fff}
+  a.pdf{font-weight:700;color:var(--a)}
+  footer{padding-block:30px;color:var(--ink2);font-size:.86rem}
+  @media (max-width:900px){header.top .wrap,.grid-2{grid-template-columns:1fr}.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}.compare{grid-template-columns:repeat(3,minmax(0,1fr))}.compare .lbl{grid-column:1/-1}}
+  @media (max-width:520px){.grid-3,.compare{grid-template-columns:1fr}header.top h1{font-size:2.5rem}.ref{grid-template-columns:96px 1fr}.ref img{width:96px;height:96px}h2{font-size:1.9rem}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Ajustes de la reunión del 21 de octubre</p>
+      <h1 style="margin-top:10px">Un lila más <em>claro</em></h1>
+      <p class="lead">Dos opciones de color tomadas de la orquídea lila de la portada, más suaves que el violeta oscuro. El punto naranja del centro se mantiene, y el nombre queda internacional: <b>DSL Orchids</b>.</p>
+    </div>
+    <div class="ref">
+      <img src="img/referencia-petalo.jpg" alt="Pétalo lila con rayas blancas de la orquídea de la portada">
+      <div><b>El color de referencia</b><span>El pétalo que señalaron en la reunión: lila con rayas blancas, "como morita en leche".</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Contenido">
+  <div class="wrap">
+    <a href="#opciones">Las dos opciones</a>
+    <a href="#logo">Logo</a>
+    <a href="#sellos">Sellos</a>
+    <a href="#tarjeta">Tarjeta</a>
+    <a href="#web">Tienda y panel</a>
+    <a href="#decidir">Para decidir</a>
+  </div>
+</nav>
+
+<section id="opciones">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Paleta</p>
+      <h2>Las dos opciones</h2>
+      <p class="muted">Cada una tiene un tono para la flor, uno más profundo para los textos y uno para los fondos de color. Los fondos son mucho más claros que el violeta noche actual.</p>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="opt-title"><span class="badge" style="background:var(--a)">A</span><div><h3>Lila orquídea</h3><p class="muted" style="font-size:.9rem">La más cercana al pétalo de la foto. Cálida, con un toque rosado.</p></div></div>
+        <div class="swatches">
+          <div class="sw"><i style="background:#B47CC7"></i>Flor<br>#B47CC7</div>
+          <div class="sw"><i style="background:#7B4A90"></i>Textos<br>#7B4A90</div>
+          <div class="sw"><i style="background:#5A3D6E"></i>Fondos<br>#5A3D6E</div>
+          <div class="sw"><i style="background:#E2C6EC"></i>Lila claro<br>#E2C6EC</div>
+          <div class="sw"><i style="background:#ED943C"></i>Naranja<br>#ED943C</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="opt-title"><span class="badge" style="background:var(--b)">B</span><div><h3>Lavanda</h3><p class="muted" style="font-size:.9rem">Más pastel y fresca, un poco más azulada.</p></div></div>
+        <div class="swatches">
+          <div class="sw"><i style="background:#A88BD3"></i>Flor<br>#A88BD3</div>
+          <div class="sw"><i style="background:#6B56A3"></i>Textos<br>#6B56A3</div>
+          <div class="sw"><i style="background:#4A3F6B"></i>Fondos<br>#4A3F6B</div>
+          <div class="sw"><i style="background:#D9CCF0"></i>Lila claro<br>#D9CCF0</div>
+          <div class="sw"><i style="background:#ED943C"></i>Naranja<br>#ED943C</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="logo">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Logo</p>
+      <h2>Mismo diseño, nuevo color</h2>
+      <p class="muted">La forma de la orquídea y del corazón naranja no cambia. Pueden ver el logo con o sin la palabra "Colombia".</p>
+      <div class="toggle" role="group" aria-label="Nombre en el logo">
+        <button type="button" aria-pressed="true" data-v="internacional">DSL Orchids</button>
+        <button type="button" aria-pressed="false" data-v="colombia">Con "Colombia"</button>
+      </div>
+    </div>
+    <div class="compare">
+      <span class="lbl">Actual</span>
+      <div class="tile"><img src="img/actual-logo-vertical-color.svg" alt="Logo actual en violeta"></div>
+      <div class="tile dark" style="background:#22163A"><img src="img/actual-logo-vertical-fondo-oscuro.svg" alt="Logo actual sobre violeta noche"></div>
+      <div class="tile"><img src="img/actual-sello-a-medalla.svg" alt="Sello actual"></div>
+
+      <span class="lbl">Opción A</span>
+      <div class="tile"><img data-logo="a-lila-orquidea-logo-vertical-color" src="img/a-lila-orquidea-logo-vertical-color-internacional.svg" alt="Logo opción A sobre blanco"></div>
+      <div class="tile dark" style="background:#5A3D6E"><img data-logo="a-lila-orquidea-logo-vertical-fondo-oscuro" src="img/a-lila-orquidea-logo-vertical-fondo-oscuro-internacional.svg" alt="Logo opción A sobre fondo de color"></div>
+      <div class="tile"><img data-logo="a-lila-orquidea-logo-horizontal-color" src="img/a-lila-orquidea-logo-horizontal-color-internacional.svg" alt="Logo horizontal opción A"></div>
+
+      <span class="lbl">Opción B</span>
+      <div class="tile"><img data-logo="b-lavanda-logo-vertical-color" src="img/b-lavanda-logo-vertical-color-internacional.svg" alt="Logo opción B sobre blanco"></div>
+      <div class="tile dark" style="background:#4A3F6B"><img data-logo="b-lavanda-logo-vertical-fondo-oscuro" src="img/b-lavanda-logo-vertical-fondo-oscuro-internacional.svg" alt="Logo opción B sobre fondo de color"></div>
+      <div class="tile"><img data-logo="b-lavanda-logo-horizontal-color" src="img/b-lavanda-logo-horizontal-color-internacional.svg" alt="Logo horizontal opción B"></div>
+    </div>
+
+    <div class="grid-2" style="margin-top:24px">
+      <div class="card">
+        <h3>La idea de la flor en contorno</h3>
+        <p class="muted" style="font-size:.92rem">Lo que propusieron en la reunión: sobre fondo blanco, la flor blanca con solo las líneas en color. Sirve para papelería, empaques claros o un sello sutil.</p>
+        <div class="grid-2">
+          <div class="tile"><img src="img/a-lila-orquidea-isotipo-contorno.svg" alt="Flor en contorno, opción A"></div>
+          <div class="tile"><img src="img/b-lavanda-isotipo-contorno.svg" alt="Flor en contorno, opción B"></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Ícono para redes y la pestaña del navegador</h3>
+        <p class="muted" style="font-size:.92rem">La flor sola sobre un círculo, para Instagram, Facebook, WhatsApp y el ícono de la página.</p>
+        <div class="grid-2">
+          <div class="tile"><img src="img/a-lila-orquidea-avatar.svg" alt="Ícono opción A" style="max-height:120px"></div>
+          <div class="tile"><img src="img/b-lavanda-avatar.svg" alt="Ícono opción B" style="max-height:120px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sellos">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Sellos para cajas</p>
+      <h2>La medalla en los nuevos colores</h2>
+      <p class="muted">Con el nombre internacional. Se usa el color que mejor contraste con cada caja.</p>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Opción A · Lila orquídea</h3>
+        <div class="grid-3">
+          <div class="tile"><img src="img/a-lila-orquidea-sello-color.svg" alt="Sello lila"></div>
+          <div class="tile"><img src="img/a-lila-orquidea-sello-marfil.svg" alt="Sello marfil"></div>
+          <div class="tile"><img src="img/a-lila-orquidea-sello-oscuro.svg" alt="Sello de fondo profundo"></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Opción B · Lavanda</h3>
+        <div class="grid-3">
+          <div class="tile"><img src="img/b-lavanda-sello-color.svg" alt="Sello lavanda"></div>
+          <div class="tile"><img src="img/b-lavanda-sello-marfil.svg" alt="Sello marfil"></div>
+          <div class="tile"><img src="img/b-lavanda-sello-oscuro.svg" alt="Sello de fondo profundo"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tarjeta">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Tarjeta de presentación</p>
+      <h2>Una tarjeta para los dos países</h2>
+      <p class="muted">Dice DSL Orchids, sin "Colombia". Lleva el teléfono de Colombia y el de Estados Unidos, sin dirección, y el código QR abre la página web.</p>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Opción A · Lila orquídea</h3>
+        <figure><img class="shot" src="img/a-lila-orquidea-tarjeta-frente.jpg" alt="Frente de la tarjeta opción A con el logo sobre lila profundo" loading="lazy"><figcaption>Frente</figcaption></figure>
+        <figure><img class="shot" src="img/a-lila-orquidea-tarjeta-reverso.jpg" alt="Reverso de la tarjeta opción A con nombre, dos teléfonos y código QR" loading="lazy"><figcaption>Reverso · <a class="pdf" href="img/tarjeta-a-lila-orquidea.pdf" target="_blank" rel="noopener">PDF para imprenta</a></figcaption></figure>
+      </div>
+      <div class="card">
+        <h3>Opción B · Lavanda</h3>
+        <figure><img class="shot" src="img/b-lavanda-tarjeta-frente.jpg" alt="Frente de la tarjeta opción B con el logo sobre lavanda profundo" loading="lazy"><figcaption>Frente</figcaption></figure>
+        <figure><img class="shot" src="img/b-lavanda-tarjeta-reverso.jpg" alt="Reverso de la tarjeta opción B con nombre, dos teléfonos y código QR" loading="lazy"><figcaption>Reverso · <a class="pdf" href="img/tarjeta-b-lavanda.pdf" target="_blank" rel="noopener">PDF para imprenta</a></figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="web">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Tienda y panel</p>
+      <h2>Así se vería la tienda</h2>
+      <p class="muted">Vista previa de la tienda con cada opción aplicada. El inicio queda mucho más luminoso.</p>
+    </div>
+    <div class="grid-2">
+      <figure><img class="shot" src="img/a-lila-orquidea-web-inicio.jpg" alt="Inicio de la tienda con la opción A" loading="lazy"><figcaption><b>Opción A</b> · Inicio</figcaption></figure>
+      <figure><img class="shot" src="img/b-lavanda-web-inicio.jpg" alt="Inicio de la tienda con la opción B" loading="lazy"><figcaption><b>Opción B</b> · Inicio</figcaption></figure>
+      <figure><img class="shot" src="img/a-lila-orquidea-web-segmentos.jpg" alt="Sección para negocios con la opción A" loading="lazy"><figcaption><b>Opción A</b> · Sección para negocios</figcaption></figure>
+      <figure><img class="shot" src="img/b-lavanda-web-segmentos.jpg" alt="Sección para negocios con la opción B" loading="lazy"><figcaption><b>Opción B</b> · Sección para negocios</figcaption></figure>
+      <figure><img class="shot" src="img/a-lila-orquidea-web-ficha.jpg" alt="Ficha de producto con la opción A" loading="lazy"><figcaption><b>Opción A</b> · Ficha de producto</figcaption></figure>
+      <figure><img class="shot" src="img/b-lavanda-web-ficha.jpg" alt="Ficha de producto con la opción B" loading="lazy"><figcaption><b>Opción B</b> · Ficha de producto</figcaption></figure>
+      <figure><img class="shot" src="img/a-lila-orquidea-web-panel.jpg" alt="Panel de administración con la opción A" loading="lazy"><figcaption><b>Opción A</b> · Panel de administración</figcaption></figure>
+      <figure><img class="shot" src="img/b-lavanda-web-panel.jpg" alt="Panel de administración con la opción B" loading="lazy"><figcaption><b>Opción B</b> · Panel de administración</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="decidir" style="border-bottom:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Para decidir</p>
+      <h2>Lo que necesitamos definir</h2>
+    </div>
+    <div class="check">
+      <div><span class="n">1</span><span><b>¿Opción A o B?</b> O una mezcla, por ejemplo la flor de una y los fondos de otra.</span></div>
+      <div><span class="n">2</span><span><b>¿El logo lleva "Colombia" o queda solo DSL Orchids?</b> En la tarjeta ya va sin "Colombia".</span></div>
+      <div><span class="n">3</span><span><b>Confirmar el teléfono de Estados Unidos.</b> Pusimos el que aparece en dslorchids.com, +1 305 240 8717.</span></div>
+      <div><span class="n">4</span><span><b>Confirmar la dirección del código QR.</b> Por ahora abre dslorchids.com. Cuando la tienda de Colombia esté en ese dominio, el código se actualiza.</span></div>
+    </div>
+    <p class="note" style="margin-top:20px">Al imprimir, los colores bajan un poco de intensidad según el papel. Antes de la producción final conviene pedir una prueba de color a la imprenta.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">DSL Orchids · Propuesta de color · 22 de octubre de 2026</div>
+</footer>
+
+<script>
+  (function () {
+    var btns = document.querySelectorAll(".toggle button");
+    btns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        btns.forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+        var suf = b.dataset.v === "internacional" ? "-internacional" : "";
+        document.querySelectorAll("img[data-logo]").forEach(function (img) {
+          img.src = "img/" + img.dataset.logo + suf + ".svg";
+        });
+      });
+    });
+  })();
+</script>
+</body>
+</html>
