@@ -108,6 +108,16 @@
   .gcol figure{margin:0;display:grid;gap:6px;min-width:0}
   .gcol .shot{border-radius:8px}
   .gcol .act .shot{outline:2px dashed var(--line);outline-offset:2px}
+  .zoom{position:fixed;inset:0;z-index:100;background:rgba(20,16,24,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+    padding:max(56px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(20px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));cursor:zoom-out}
+  .zoom[hidden]{display:none}
+  .zoom img{max-width:min(1400px,100%);max-height:calc(100% - 40px);object-fit:contain;border-radius:10px;background:#fff;box-shadow:0 20px 60px rgba(0,0,0,.5);cursor:default}
+  .zoom img.trans{background:transparent}
+  .zoom p{color:#F2ECE2;font-size:.9rem;text-align:center;max-width:70ch}
+  .zoom button{position:fixed;top:max(12px,env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px));width:48px;height:48px;border-radius:50%;border:0;
+    background:#fff;color:#2A2033;font-size:28px;line-height:1;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+  main img,section img{cursor:zoom-in}
+  body.sin-scroll{overflow:hidden}
   footer{padding-block:30px;color:var(--ink2);font-size:.86rem}
   @media (max-width:980px){.pal{grid-template-columns:repeat(2,minmax(0,1fr))}.pal .info{grid-column:1/-1}}
   @media (max-width:900px){header.top .wrap,.cards{grid-template-columns:1fr}.concepts{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -420,6 +430,32 @@
       g += "</div></div>";
     });
     document.getElementById("grupos-colores").innerHTML = g;
+  })();
+</script>
+<div class="zoom" id="zoom" hidden role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+  <button type="button" id="zoom-cerrar" aria-label="Cerrar">×</button>
+  <img id="zoom-img" alt="">
+  <p id="zoom-txt"></p>
+</div>
+<script>
+  (function () {
+    var z = document.getElementById("zoom"), zi = document.getElementById("zoom-img"), zt = document.getElementById("zoom-txt");
+    function abrir(src, txt) {
+      zi.src = src; zi.alt = txt || ""; zt.textContent = txt || "";
+      zi.classList.toggle("trans", /\.(svg|png)$/i.test(src) && !/tarjeta|web-|maqueta|caja/.test(src));
+      z.hidden = false; document.body.classList.add("sin-scroll"); document.getElementById("zoom-cerrar").focus();
+    }
+    function cerrar() { z.hidden = true; zi.removeAttribute("src"); document.body.classList.remove("sin-scroll"); }
+    document.addEventListener("click", function (e) {
+      if (!z.hidden) { if (e.target !== zi) cerrar(); return; }
+      var img = e.target.closest("section img");
+      if (!img) return;
+      var a = img.closest("a"), src = img.currentSrc || img.src;
+      if (a && /\.(jpe?g|png|svg|webp)$/i.test(a.getAttribute("href") || "")) src = a.href;
+      e.preventDefault();
+      abrir(src, img.alt);
+    });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !z.hidden) cerrar(); });
   })();
 </script>
 </body>
