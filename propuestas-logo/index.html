@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Propuestas de logo · DSL Orchids</title>
+<meta name="description" content="Abanico de conceptos de logo y de colores para DSL Orchids, siempre junto al logo actual.">
+<link rel="icon" href="img/actual-avatar.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+  :root{--bg:#FAF6F1;--surface:#FFFFFF;--line:#E9DFD3;--ink:#2A2033;--ink2:#5C5266;--oro:#B8913F;--oro-hondo:#7E6222;--violeta:#5A3694;
+    --display:"Cormorant Garamond",Georgia,serif;--body:"Manrope",system-ui,sans-serif;color-scheme:light}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+  h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;margin:0;text-wrap:balance}
+  p{margin:0}
+  .wrap{max-width:1180px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+  .eyebrow{font-size:.74rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--oro-hondo)}
+  .muted{color:var(--ink2)}
+  header.top{background:radial-gradient(70% 120% at 85% 10%,#4A3A22 0%,transparent 60%),linear-gradient(120deg,#22163A,#2E2618);color:#fff;padding-block:54px 46px}
+  header.top .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:center}
+  header.top h1{font-size:3.3rem;color:#fff} header.top h1 em{color:#E6CD8E;font-weight:500}
+  header.top .lead{margin-top:14px;max-width:60ch;color:#F2ECE2}
+  header.top .eyebrow{color:#E6CD8E}
+  .dots{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .dots i{width:30px;height:30px;border-radius:50%;border:2px solid rgba(255,255,255,.35)}
+  .asks{display:grid;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:18px;padding:18px}
+  .asks b{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#E6CD8E}
+  .asks p{font-size:.95rem;color:#F2ECE2}
+  nav.toc{position:sticky;top:0;z-index:10;background:rgba(250,246,241,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav.toc .wrap{display:flex;gap:4px;overflow-x:auto;padding-block:10px;scrollbar-width:none}
+  nav.toc a{white-space:nowrap;text-decoration:none;font-size:.84rem;font-weight:700;color:var(--ink2);padding:7px 12px;border-radius:999px}
+  nav.toc a:hover{background:#F3EBDA;color:var(--oro-hondo)}
+  section{padding-block:56px;border-bottom:1px solid var(--line)}
+  .sec-head{display:grid;gap:8px;margin-bottom:26px;max-width:72ch}
+  h2{font-size:2.3rem} h3{font-size:1.35rem}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:12px;min-width:0}
+  .card.actual{background:#F6F2F7;border-style:dashed}
+  .num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;font-family:var(--display);font-size:1.25rem;font-weight:600;flex:none}
+  .card .head{display:flex;gap:12px;align-items:center}
+  .concepts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  .concept-img{background:#fff;border:1px solid var(--line);border-radius:14px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden;max-width:100%}
+  .concept-img img{width:100%;height:100%;object-fit:contain;display:block}
+  .concept-img.svg img{width:72%;height:72%}
+  .refs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:26px}
+  .refs figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px;display:grid;gap:8px;min-width:0}
+  .refs .box{height:150px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:10px;overflow:hidden}
+  .refs img{max-width:100%;max-height:150px;display:block}
+  figcaption{font-size:.86rem;color:var(--ink2)}
+  .pal-list{display:grid;gap:14px}
+  .pal{display:grid;grid-template-columns:200px repeat(4,minmax(0,1fr));gap:12px;align-items:stretch;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px}
+  .pal.actual{background:#F6F2F7;border-style:dashed}
+  .pal>*{min-width:0}
+  .pal .info{display:flex;flex-direction:column;gap:8px;justify-content:center}
+  .pal .info h3{font-size:1.3rem}
+  .sw{display:flex;gap:6px;flex-wrap:wrap}
+  .sw i{width:28px;height:28px;border-radius:8px;border:1px solid rgba(0,0,0,.08)}
+  .tile{border:1px solid var(--line);border-radius:12px;display:flex;align-items:center;justify-content:center;padding:12px;min-height:150px;background:#fff}
+  .tile img{max-width:100%;max-height:130px}
+  .tile.dark{border-color:transparent}
+  .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+  .shot{width:100%;height:auto;display:block;border-radius:10px;box-shadow:0 12px 30px -22px rgba(42,32,51,.6)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  a.pdf{font-weight:700;color:var(--oro-hondo)}
+  .check{display:grid;gap:10px}
+  .check div{display:grid;grid-template-columns:28px 1fr;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .check span.n{font-family:var(--display);font-size:1.4rem;line-height:1;color:var(--oro-hondo);font-weight:600}
+  .note{border-left:4px solid var(--oro);background:var(--surface);border-radius:0 12px 12px 0;padding:14px 18px}
+  footer{padding-block:30px;color:var(--ink2);font-size:.86rem}
+  @media (max-width:980px){.pal{grid-template-columns:repeat(2,minmax(0,1fr))}.pal .info{grid-column:1/-1}}
+  @media (max-width:900px){header.top .wrap,.cards{grid-template-columns:1fr}.concepts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media (max-width:560px){.concepts,.refs{grid-template-columns:1fr}header.top h1{font-size:2.5rem}h2{font-size:1.9rem}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Propuestas · 22 de octubre</p>
+      <h1 style="margin-top:10px">Un abanico de <em>opciones</em></h1>
+      <p class="lead">Nuevas ideas de flor y de logo, y el logo actual en los colores que pidieron. En cada sección el <b>actual</b> va primero, para comparar.</p>
+      <div class="dots" aria-hidden="true">
+        <i style="background:#C9A24D"></i><i style="background:#B47CC7"></i><i style="background:#6F93C9"></i><i style="background:#5FA88A"></i><i style="background:#E8B93C"></i><i style="background:#ED943C"></i><i style="background:#C99484"></i>
+      </div>
+    </div>
+    <div class="asks">
+      <b>Lo que pidieron</b>
+      <p>Ver la tarjeta y la marca en azul, verde, amarillo, naranja y café, y algo con dorado.</p>
+      <p>Dos o tres opciones más de flor para el logo.</p>
+      <p>Tener en cuenta su primer logo, DSL International Orchids, y los conceptos que enviaron.</p>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Contenido">
+  <div class="wrap">
+    <a href="#conceptos">Conceptos de logo</a>
+    <a href="#colores">Colores</a>
+    <a href="#tarjeta">Tarjeta</a>
+    <a href="#decidir">Para decidir</a>
+  </div>
+</nav>
+
+<section id="conceptos">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Conceptos de logo</p>
+      <h2>Otras flores, otros estilos</h2>
+      <p class="muted">Cinco ideas a partir de lo que enviaron. Son bocetos para elegir un camino: el que escojan se redibuja a mano en vector, con las letras exactas, para que se vea nítido en cajas, tarjetas y la web.</p>
+    </div>
+
+    <p class="eyebrow" style="margin-bottom:10px">Lo que enviaron</p>
+    <div class="refs">
+      <figure><div class="box"><img src="img/ref-primer-logo.jpg" alt="Primer logo: DSL International Orchids con una vara de flores azules"></div><figcaption>Su primer logo, DSL International Orchids</figcaption></figure>
+      <figure><div class="box"><img src="img/ref-monograma-dorado.jpg" alt="Concepto con monograma DSL dorado y orquídea"></div><figcaption>Monograma dorado con orquídea</figcaption></figure>
+      <figure><div class="box"><img src="img/ref-caligrafia-oro-rosa.jpg" alt="Conceptos en letra caligráfica oro rosa"></div><figcaption>Caligrafía en oro rosa</figcaption></figure>
+    </div>
+
+    <div class="concepts" id="lista-conceptos">
+      <div class="card actual">
+        <div class="head"><span class="num" style="background:#5A3694">·</span><div><h3>Actual</h3><p class="muted" style="font-size:.88rem">La orquídea de cinco pétalos con el corazón naranja.</p></div></div>
+        <div class="concept-img svg"><img src="img/actual-logo-vertical-color.svg" alt="Logo actual"></div>
+      </div>
+      <div class="card">
+        <div class="head"><span class="num">1</span><div><h3>Su primer logo, renovado</h3></div></div>
+        <div class="concept-img"><a href="img/concepto-c1-clasico-renovado.jpg" target="_blank" rel="noopener" aria-label="Ver Su primer logo, renovado en grande" style="display:contents"><img src="img/concepto-c1-clasico-renovado.jpg" alt="Concepto 1: Su primer logo, renovado" loading="lazy"></a></div>
+        <p class="muted" style="font-size:.9rem">Conserva la idea que ya conocen sus clientes: DSL International en letra limpia y Orchids en caligrafía, con una vara de orquídeas lila. Verde oliva y lila.</p>
+      </div>
+      <div class="card">
+        <div class="head"><span class="num">2</span><div><h3>Monograma dorado</h3></div></div>
+        <div class="concept-img"><a href="img/concepto-c2-monograma-dorado.jpg" target="_blank" rel="noopener" aria-label="Ver Monograma dorado en grande" style="display:contents"><img src="img/concepto-c2-monograma-dorado.jpg" alt="Concepto 2: Monograma dorado" loading="lazy"></a></div>
+        <p class="muted" style="font-size:.9rem">Basado en el concepto que enviaron: las iniciales DSL en dorado dentro de un arco, con una Phalaenopsis. Verde esmeralda y dorado, muy de lujo.</p>
+      </div>
+      <div class="card">
+        <div class="head"><span class="num">3</span><div><h3>Caligrafía en oro rosa</h3></div></div>
+        <div class="concept-img"><a href="img/concepto-c3-caligrafia-oro-rosa.jpg" target="_blank" rel="noopener" aria-label="Ver Caligrafía en oro rosa en grande" style="display:contents"><img src="img/concepto-c3-caligrafia-oro-rosa.jpg" alt="Concepto 3: Caligrafía en oro rosa" loading="lazy"></a></div>
+        <p class="muted" style="font-size:.9rem">Basado en sus conceptos en oro rosa: Orchids en caligrafía grande y una Dendrobium blanca con centro lila. Elegante y femenino.</p>
+      </div>
+      <div class="card">
+        <div class="head"><span class="num">4</span><div><h3>Flor en línea dorada</h3></div></div>
+        <div class="concept-img"><a href="img/concepto-c4-linea-minimalista.jpg" target="_blank" rel="noopener" aria-label="Ver Flor en línea dorada en grande" style="display:contents"><img src="img/concepto-c4-linea-minimalista.jpg" alt="Concepto 4: Flor en línea dorada" loading="lazy"></a></div>
+        <p class="muted" style="font-size:.9rem">Una orquídea dibujada con una línea fina dorada y DSL en azul noche. Moderno y sobrio; se ve bien en tamaños pequeños.</p>
+      </div>
+      <div class="card">
+        <div class="head"><span class="num">5</span><div><h3>Emblema circular</h3></div></div>
+        <div class="concept-img"><a href="img/concepto-c5-emblema.jpg" target="_blank" rel="noopener" aria-label="Ver Emblema circular en grande" style="display:contents"><img src="img/concepto-c5-emblema.jpg" alt="Concepto 5: Emblema circular" loading="lazy"></a></div>
+        <p class="muted" style="font-size:.9rem">Un sello redondo con una vara de Dendrobium lila y el nombre alrededor. Sirve como logo y como sello para las cajas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="colores">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Colores</p>
+      <h2>El logo en siete colores</h2>
+      <p class="muted">La flor del logo actual en cada color que pidieron. Los mismos colores se pueden aplicar al concepto de logo que elijan. En cada fila: sobre blanco, sobre fondo de color, el sello para cajas y el ícono para redes.</p>
+    </div>
+    <div class="pal-list" id="paletas"></div>
+  </div>
+</section>
+
+<section id="tarjeta">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Tarjeta de presentación</p>
+      <h2>La tarjeta en cada color</h2>
+      <p class="muted">Frente y reverso, con los teléfonos de Colombia y de Estados Unidos y el código QR a dslorchids.com. Cada una tiene su PDF listo para imprenta.</p>
+    </div>
+    <div class="cards" id="tarjetas"></div>
+  </div>
+</section>
+
+<section id="decidir" style="border-bottom:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Para decidir</p>
+      <h2>Lo que necesitamos definir</h2>
+    </div>
+    <div class="check">
+      <div><span class="n">1</span><span><b>¿Qué logo?</b> El actual o uno de los conceptos nuevos. También se pueden mezclar, por ejemplo la flor de uno con las letras de otro.</span></div>
+      <div><span class="n">2</span><span><b>¿Qué color?</b> Uno de los siete o una combinación, por ejemplo el lila con detalles dorados.</span></div>
+      <div><span class="n">3</span><span><b>¿El nombre lleva "International"?</b> Su primer logo lo tenía; hoy la tarjeta dice solo DSL Orchids.</span></div>
+    </div>
+    <p class="note" style="margin-top:20px">Los dorados y los colores claros cambian bastante al imprimir según el papel y la tinta. Para el dorado se puede usar tinta metálica o estampado en caliente; conviene pedir una prueba a la imprenta antes de la producción final.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">DSL Orchids · Propuestas de logo y color · 22 de octubre de 2026</div>
+</footer>
+
+<script>
+  (function () {
+    var ACTUAL = { slug: "actual", nombre: "Actual", nota: "Violeta profundo con el corazón naranja.", colores: ["#5A3694", "#22163A", "#CBB8EC", "#ED943C"], oscuro: "#22163A" };
+    var P = [
+      { slug: "dorado-champan", nombre: "Dorado champán", nota: "El dorado que pidió su esposa, con el corazón lila.", colores: ["#C9A24D", "#7E6222", "#2E2618", "#9A5BB0"], oscuro: "#2E2618" },
+      { slug: "lila-dorado", nombre: "Lila con dorado", nota: "La orquídea lila con el corazón dorado.", colores: ["#B47CC7", "#6E4285", "#3E2A4F", "#C9A24D"], oscuro: "#3E2A4F" },
+      { slug: "azul-noche", nombre: "Azul noche", nota: "Azul sereno con detalles dorados.", colores: ["#6F93C9", "#2F4F86", "#1E2B45", "#C9A24D"], oscuro: "#1E2B45" },
+      { slug: "verde-esmeralda", nombre: "Verde esmeralda", nota: "Verde hoja con detalles dorados.", colores: ["#5FA88A", "#1F5C47", "#1F3F35", "#C9A24D"], oscuro: "#1F3F35" },
+      { slug: "amarillo-sol", nombre: "Amarillo sol", nota: "Amarillo cálido con el corazón violeta.", colores: ["#E8B93C", "#76580F", "#3A3020", "#5A3694"], oscuro: "#3A3020" },
+      { slug: "naranja-coral", nombre: "Naranja coral", nota: "El naranja del sello actual como color principal.", colores: ["#ED943C", "#9A4E17", "#4A2A17", "#5A3694"], oscuro: "#4A2A17" },
+      { slug: "cafe-rosa", nombre: "Café y rosa antiguo", nota: "Rosa empolvado sobre café, con corazón dorado.", colores: ["#C99484", "#6B4A33", "#3B2A1F", "#C9A24D"], oscuro: "#3B2A1F" }
+    ];
+    function sw(c) { return '<div class="sw" aria-hidden="true">' + c.map(function (x) { return '<i style="background:' + x + '" title="' + x + '"></i>'; }).join("") + "</div>"; }
+    function fila(p) {
+      var a = p.slug === "actual";
+      var f = a ? { v: "actual-logo-vertical-color.svg", o: "actual-logo-vertical-fondo-oscuro.svg", s: "actual-sello-a-medalla-marfil.svg", av: "actual-avatar.svg" }
+                : { v: p.slug + "-logo-vertical-color-internacional.svg", o: p.slug + "-logo-vertical-fondo-oscuro-internacional.svg", s: p.slug + "-sello-marfil.svg", av: p.slug + "-avatar.svg" };
+      return '<div class="pal' + (a ? " actual" : "") + '"><div class="info"><h3>' + p.nombre + '</h3><p class="muted" style="font-size:.88rem">' + p.nota + "</p>" + sw(p.colores) + "</div>" +
+        '<div class="tile"><img src="img/' + f.v + '" alt="Logo ' + p.nombre + ' sobre blanco" loading="lazy"></div>' +
+        '<div class="tile dark" style="background:' + p.oscuro + '"><img src="img/' + f.o + '" alt="Logo ' + p.nombre + ' sobre fondo de color" loading="lazy"></div>' +
+        '<div class="tile"><img src="img/' + f.s + '" alt="Sello ' + p.nombre + '" loading="lazy"></div>' +
+        '<div class="tile"><img src="img/' + f.av + '" alt="Ícono ' + p.nombre + '" style="max-height:110px" loading="lazy"></div></div>';
+    }
+    function tarjeta(p) {
+      var a = p.slug === "actual";
+      return '<div class="card' + (a ? " actual" : "") + '"><h3>' + p.nombre + '</h3><div class="pair">' +
+        '<a href="img/' + p.slug + '-tarjeta-frente.jpg" target="_blank" rel="noopener" aria-label="Ver frente en grande"><img class="shot" src="img/' + p.slug + '-tarjeta-frente.jpg" alt="Frente de la tarjeta, ' + p.nombre + '" loading="lazy"></a>' +
+        '<a href="img/' + p.slug + '-tarjeta-reverso.jpg" target="_blank" rel="noopener" aria-label="Ver reverso en grande"><img class="shot" src="img/' + p.slug + '-tarjeta-reverso.jpg" alt="Reverso de la tarjeta, ' + p.nombre + '" loading="lazy"></a></div>' +
+        '<p class="muted" style="font-size:.86rem">' + (a ? 'La tarjeta actual dice "DSL Orchids Colombia" y tiene un solo teléfono.' : '<a class="pdf" href="img/tarjeta-' + p.slug + '.pdf" target="_blank" rel="noopener">PDF para imprenta</a>') + "</p></div>";
+    }
+    document.getElementById("paletas").innerHTML = [ACTUAL].concat(P).map(fila).join("");
+    document.getElementById("tarjetas").innerHTML = [ACTUAL].concat(P).map(tarjeta).join("");
+  })();
+</script>
+</body>
+</html>
