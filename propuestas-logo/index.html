@@ -361,7 +361,7 @@
     }
     function pintar(k) {
       document.getElementById("panel-aplicado").innerHTML = FILAS.map(function (fila) {
-        return '<div class="app"><h3>' + fila.t + "</h3>" + (fila.ia ? '<p class="ia">Simulación hecha con inteligencia artificial: el logo puede verse un poco distinto al original.</p>' : "") +
+        return '<div class="app"><h3>' + fila.t + "</h3>" + "" +
           '<div class="vs">' + fig("c0", fila, true) + fig(k, fila, false) + "</div></div>";
       }).join("");
       document.querySelectorAll(".tabs button").forEach(function (b) { b.setAttribute("aria-selected", String(b.dataset.c === k)); });
@@ -385,8 +385,8 @@
       { t: "Tarjeta · frente claro", f: "tarjeta-frente-claro.jpg" },
       { t: "Tarjeta · frente oscuro", f: "tarjeta-frente-oscuro.jpg" },
       { t: "Tarjeta · reverso", f: "tarjeta-reverso.jpg", pdf: true },
-      { t: "Papelería, bolsa y caja (simulación con IA)", f: "maqueta.jpg" },
-      { t: "Caja oscura de regalo (simulación con IA)", f: "caja.jpg", sinActual: true },
+      { t: "Papelería, bolsa y caja", f: "maqueta.jpg" },
+      { t: "Caja oscura de regalo", f: "caja.jpg", sinActual: true },
       { t: "Tienda en línea", f: "web-inicio.jpg" }
     ];
     var h = "";
