@@ -101,6 +101,7 @@
   .cmp .lg{background:#fff;border:1px solid var(--line);border-radius:12px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;padding:10px;max-width:100%}
   .cmp .lg img{max-width:100%;max-height:100%;object-fit:contain}
   .cmp .shot{border:1px solid var(--line)}
+  .cmp img.shot[src*="maqueta"],.cmp img.shot[src*="caja"],.cmp img.shot[src*="web-"]{width:100%;aspect-ratio:3/2;object-fit:cover}
   .cmp a.pdf{font-size:.84rem;margin-top:6px}
   .grupos{display:grid;gap:30px}
   .grupo h3{margin-bottom:12px}
@@ -171,10 +172,10 @@
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">Tarjetas en colores</p>
-      <h2>Los tres dorados en la tarjeta, en varios colores</h2>
-      <p class="muted">El dorado combina con fondos oscuros (azul, verde, café, negro, lila, vino) y con papeles claros (blanco, marfil, rosa palo, amarillo suave). El primer recuadro de cada grupo es la tarjeta con su sello actual, para comparar.</p>
+      <h2>La tarjeta en cada color, con las cinco opciones</h2>
+      <p class="muted">Cada fila es un color de tarjeta, con su sello actual, los tres dorados y la orquídea violeta, para comparar todas sobre el mismo fondo: seis oscuros (azul, verde, café, negro, lila, vino) y cuatro papeles claros (blanco, marfil, rosa palo, amarillo suave). En el celular, deslice cada fila hacia el lado.</p>
     </div>
-    <div id="grupos-colores" class="grupos"></div>
+    <div class="cmp-wrap"><div class="cmp" id="cmp-colores"></div></div>
   </div>
 </section>
 
@@ -396,7 +397,7 @@
       { t: "Tarjeta · frente oscuro", f: "tarjeta-frente-oscuro.jpg" },
       { t: "Tarjeta · reverso", f: "tarjeta-reverso.jpg", pdf: true },
       { t: "Papelería, bolsa y caja", f: "maqueta.jpg" },
-      { t: "Caja oscura de regalo", f: "caja.jpg", sinActual: true },
+      { t: "Caja oscura de regalo", f: "caja.jpg" },
       { t: "Tienda en línea", f: "web-inicio.jpg" }
     ];
     var h = "";
@@ -421,15 +422,15 @@
     var FONDOS = [["azul-noche", "Azul noche"], ["verde-esmeralda", "Verde esmeralda"], ["cafe", "Café"], ["negro", "Negro"], ["lila-profundo", "Lila profundo"],
                   ["vino", "Vino"], ["blanco", "Blanco"], ["marfil", "Marfil"], ["rosa-palo", "Rosa palo"], ["amarillo-suave", "Amarillo suave"]];
     var g = "";
-    COLS.filter(function (c) { return !c.act; }).forEach(function (c) {
-      g += '<div class="grupo"><h3>' + c.n + '</h3><div class="gcol"><figure class="act"><img class="shot" src="img/apl/c0-tarjeta-frente-oscuro.jpg" alt="Tarjeta con su sello actual" loading="lazy"><figcaption>Actual · su sello</figcaption></figure>';
-      FONDOS.forEach(function (f) {
+    FONDOS.forEach(function (f) {
+      g += '<div class="rt">' + f[1] + "</div>";
+      COLS.forEach(function (c) {
         var src = "img/col/" + c.k + "-" + f[0] + ".jpg";
-        g += '<figure><a href="' + src + '" target="_blank" rel="noopener" aria-label="Ver en grande"><img class="shot" src="' + src + '" alt="' + c.n + " sobre " + f[1] + '" loading="lazy"></a><figcaption>' + f[1] + "</figcaption></figure>";
+        g += '<div class="cell' + (c.act ? " act" : "") + '"><div class="ch' + (c.act ? " act" : "") + '">' + c.n + "</div>" +
+          '<a href="' + src + '" target="_blank" rel="noopener" aria-label="Ver en grande"><img class="shot" src="' + src + '" alt="Tarjeta ' + c.n + " sobre " + f[1] + '" loading="lazy"></a></div>';
       });
-      g += "</div></div>";
     });
-    document.getElementById("grupos-colores").innerHTML = g;
+    document.getElementById("cmp-colores").innerHTML = g;
   })();
 </script>
 <div class="zoom" id="zoom" hidden role="dialog" aria-modal="true" aria-label="Imagen ampliada">
