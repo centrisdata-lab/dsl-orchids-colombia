@@ -69,6 +69,26 @@
   .check div{display:grid;grid-template-columns:28px 1fr;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
   .check span.n{font-family:var(--display);font-size:1.4rem;line-height:1;color:var(--oro-hondo);font-weight:600}
   .note{border-left:4px solid var(--oro);background:var(--surface);border-radius:0 12px 12px 0;padding:14px 18px}
+  a.ver{font-weight:700;font-size:.9rem;color:var(--oro-hondo);text-decoration:none;margin-top:auto}
+  a.ver:hover{text-decoration:underline}
+  .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+  .tabs button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:9px 16px;font:inherit;font-size:.88rem;font-weight:700;color:var(--ink2);cursor:pointer;min-height:40px}
+  .tabs button[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+  .app{display:grid;gap:10px;padding-block:18px;border-top:1px solid var(--line)}
+  .app:first-child{border-top:0;padding-top:0}
+  .app h3{font-size:1.25rem}
+  .vs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .vs>figure{min-width:0;margin:0;display:flex;flex-direction:column;gap:8px}
+  .vs .shot{border:1px solid var(--line)}
+  .lbl-a,.lbl-c{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+  .lbl-a{color:var(--ink2)} .lbl-c{color:var(--oro-hondo)}
+  .perfil{display:flex;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;min-height:120px}
+  .perfil .av{flex:none;width:84px;height:84px;border-radius:50%;display:grid;place-items:center;overflow:hidden;border:1px solid var(--line)}
+  .perfil .av img{width:100%;height:100%;object-fit:contain}
+  .perfil b{display:block;font-size:1rem} .perfil small{color:var(--ink2);font-size:.84rem}
+  .perfil .duo{display:flex;gap:10px}
+  .ia{font-size:.82rem;color:var(--ink2);font-style:italic}
+  @media (max-width:640px){.vs{grid-template-columns:1fr}.perfil{flex-wrap:wrap}}
   footer{padding-block:30px;color:var(--ink2);font-size:.86rem}
   @media (max-width:980px){.pal{grid-template-columns:repeat(2,minmax(0,1fr))}.pal .info{grid-column:1/-1}}
   @media (max-width:900px){header.top .wrap,.cards{grid-template-columns:1fr}.concepts{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -99,8 +119,9 @@
 <nav class="toc" aria-label="Contenido">
   <div class="wrap">
     <a href="#conceptos">Conceptos de logo</a>
+    <a href="#aplicado">Cada logo aplicado</a>
     <a href="#colores">Colores</a>
-    <a href="#tarjeta">Tarjeta</a>
+    <a href="#tarjeta">Tarjeta en colores</a>
     <a href="#decidir">Para decidir</a>
   </div>
 </nav>
@@ -129,28 +150,51 @@
         <div class="head"><span class="num">1</span><div><h3>Su primer logo, renovado</h3></div></div>
         <div class="concept-img"><a href="img/concepto-c1-clasico-renovado.jpg" target="_blank" rel="noopener" aria-label="Ver Su primer logo, renovado en grande" style="display:contents"><img src="img/concepto-c1-clasico-renovado.jpg" alt="Concepto 1: Su primer logo, renovado" loading="lazy"></a></div>
         <p class="muted" style="font-size:.9rem">Conserva la idea que ya conocen sus clientes: DSL International en letra limpia y Orchids en caligrafía, con una vara de orquídeas lila. Verde oliva y lila.</p>
+        <a class="ver" href="#aplicado" data-ir="c1">Ver cómo se ve aplicado →</a>
       </div>
       <div class="card">
         <div class="head"><span class="num">2</span><div><h3>Monograma dorado</h3></div></div>
         <div class="concept-img"><a href="img/concepto-c2-monograma-dorado.jpg" target="_blank" rel="noopener" aria-label="Ver Monograma dorado en grande" style="display:contents"><img src="img/concepto-c2-monograma-dorado.jpg" alt="Concepto 2: Monograma dorado" loading="lazy"></a></div>
         <p class="muted" style="font-size:.9rem">Basado en el concepto que enviaron: las iniciales DSL en dorado dentro de un arco, con una Phalaenopsis. Verde esmeralda y dorado, muy de lujo.</p>
+        <a class="ver" href="#aplicado" data-ir="c2">Ver cómo se ve aplicado →</a>
       </div>
       <div class="card">
         <div class="head"><span class="num">3</span><div><h3>Caligrafía en oro rosa</h3></div></div>
         <div class="concept-img"><a href="img/concepto-c3-caligrafia-oro-rosa.jpg" target="_blank" rel="noopener" aria-label="Ver Caligrafía en oro rosa en grande" style="display:contents"><img src="img/concepto-c3-caligrafia-oro-rosa.jpg" alt="Concepto 3: Caligrafía en oro rosa" loading="lazy"></a></div>
         <p class="muted" style="font-size:.9rem">Basado en sus conceptos en oro rosa: Orchids en caligrafía grande y una Dendrobium blanca con centro lila. Elegante y femenino.</p>
+        <a class="ver" href="#aplicado" data-ir="c3">Ver cómo se ve aplicado →</a>
       </div>
       <div class="card">
         <div class="head"><span class="num">4</span><div><h3>Flor en línea dorada</h3></div></div>
         <div class="concept-img"><a href="img/concepto-c4-linea-minimalista.jpg" target="_blank" rel="noopener" aria-label="Ver Flor en línea dorada en grande" style="display:contents"><img src="img/concepto-c4-linea-minimalista.jpg" alt="Concepto 4: Flor en línea dorada" loading="lazy"></a></div>
         <p class="muted" style="font-size:.9rem">Una orquídea dibujada con una línea fina dorada y DSL en azul noche. Moderno y sobrio; se ve bien en tamaños pequeños.</p>
+        <a class="ver" href="#aplicado" data-ir="c4">Ver cómo se ve aplicado →</a>
       </div>
       <div class="card">
         <div class="head"><span class="num">5</span><div><h3>Emblema circular</h3></div></div>
         <div class="concept-img"><a href="img/concepto-c5-emblema.jpg" target="_blank" rel="noopener" aria-label="Ver Emblema circular en grande" style="display:contents"><img src="img/concepto-c5-emblema.jpg" alt="Concepto 5: Emblema circular" loading="lazy"></a></div>
         <p class="muted" style="font-size:.9rem">Un sello redondo con una vara de Dendrobium lila y el nombre alrededor. Sirve como logo y como sello para las cajas.</p>
+        <a class="ver" href="#aplicado" data-ir="c5">Ver cómo se ve aplicado →</a>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="aplicado">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Cada logo aplicado</p>
+      <h2>Así se vería cada logo en todo</h2>
+      <p class="muted">Elija un concepto: aparece en la tarjeta, la papelería y la caja, la tienda en línea y las redes. A la izquierda siempre está el logo actual, para comparar.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Concepto">
+      <button type="button" role="tab" data-c="c1" aria-selected="true">1 · Primer logo renovado</button>
+      <button type="button" role="tab" data-c="c2" aria-selected="false">2 · Monograma dorado</button>
+      <button type="button" role="tab" data-c="c3" aria-selected="false">3 · Oro rosa</button>
+      <button type="button" role="tab" data-c="c4" aria-selected="false">4 · Línea dorada</button>
+      <button type="button" role="tab" data-c="c5" aria-selected="false">5 · Emblema</button>
+    </div>
+    <div id="panel-aplicado" role="tabpanel" aria-live="polite"></div>
   </div>
 </section>
 
@@ -227,6 +271,54 @@
     }
     document.getElementById("paletas").innerHTML = [ACTUAL].concat(P).map(fila).join("");
     document.getElementById("tarjetas").innerHTML = [ACTUAL].concat(P).map(tarjeta).join("");
+  })();
+</script>
+<script>
+  (function () {
+    var C = {
+      c0: { nombre: "Actual", papel: "#FFFDF9", oscuro: "#22163A", marca: "img/actual-isotipo-color.svg", marcaOscuro: "img/actual-avatar.svg", perfil: "DSL Orchids Colombia" },
+      c1: { nombre: "Su primer logo, renovado", papel: "#FFFFFF", oscuro: "#28301F" },
+      c2: { nombre: "Monograma dorado", papel: "#FBF8F1", oscuro: "#1F3F35" },
+      c3: { nombre: "Caligrafía en oro rosa", papel: "#FDF7F4", oscuro: "#3A2A2E" },
+      c4: { nombre: "Flor en línea dorada", papel: "#FFFFFF", oscuro: "#1E2B45" },
+      c5: { nombre: "Emblema circular", papel: "#FBF8F1", oscuro: "#1F3F35" }
+    };
+    Object.keys(C).forEach(function (k) {
+      var c = C[k]; c.marca = c.marca || "img/apl/" + k + "-marca.png"; c.marcaOscuro = c.marcaOscuro || "img/apl/" + k + "-marca-oscuro.png";
+      c.perfil = c.perfil || "DSL International Orchids";
+    });
+    var FILAS = [
+      { t: "Tarjeta · frente claro", f: "tarjeta-frente-claro.jpg" },
+      { t: "Tarjeta · frente oscuro", f: "tarjeta-frente-oscuro.jpg" },
+      { t: "Tarjeta · reverso", f: "tarjeta-reverso.jpg", pdf: true },
+      { t: "Papelería y caja", f: "maqueta.jpg", ia: true },
+      { t: "Tienda en línea · inicio", f: "web-inicio.jpg" },
+      { t: "Tienda en línea · ficha de producto", f: "web-ficha.jpg" },
+      { t: "Tienda en línea · pie de página", f: "web-pie.jpg" },
+      { t: "Redes sociales y WhatsApp", perfil: true }
+    ];
+    function fig(k, fila, esActual) {
+      var c = C[k], lbl = esActual ? '<span class="lbl-a">Actual</span>' : '<span class="lbl-c">Concepto ' + k.slice(1) + " · " + c.nombre + "</span>";
+      if (fila.perfil) {
+        return '<figure>' + lbl + '<div class="perfil"><div class="duo">' +
+          '<span class="av" style="background:' + c.papel + '"><img src="' + c.marca + '" alt="Foto de perfil clara, ' + c.nombre + '" loading="lazy"></span>' +
+          '<span class="av" style="background:' + c.oscuro + ';border-color:' + c.oscuro + '"><img src="' + c.marcaOscuro + '" alt="Foto de perfil oscura, ' + c.nombre + '" loading="lazy"></span></div>' +
+          "<div><b>" + c.perfil + "</b><small>Orquídeas importadas de Tailandia</small></div></div></figure>";
+      }
+      var src = "img/apl/" + k + "-" + fila.f, extra = "";
+      if (fila.pdf) extra = '<figcaption><a class="pdf" href="img/apl/tarjeta-' + k + '.pdf" target="_blank" rel="noopener">PDF para imprenta</a></figcaption>';
+      return "<figure>" + lbl + '<a href="' + src + '" target="_blank" rel="noopener" aria-label="Ver en grande"><img class="shot" src="' + src + '" alt="' + fila.t + ", " + (esActual ? "actual" : c.nombre) + '" loading="lazy"></a>' + extra + "</figure>";
+    }
+    function pintar(k) {
+      document.getElementById("panel-aplicado").innerHTML = FILAS.map(function (fila) {
+        return '<div class="app"><h3>' + fila.t + "</h3>" + (fila.ia ? '<p class="ia">Simulación hecha con inteligencia artificial: el logo puede verse un poco distinto al original.</p>' : "") +
+          '<div class="vs">' + fig("c0", fila, true) + fig(k, fila, false) + "</div></div>";
+      }).join("");
+      document.querySelectorAll(".tabs button").forEach(function (b) { b.setAttribute("aria-selected", String(b.dataset.c === k)); });
+    }
+    document.querySelectorAll(".tabs button").forEach(function (b) { b.addEventListener("click", function () { pintar(b.dataset.c); }); });
+    document.querySelectorAll("a.ver").forEach(function (a) { a.addEventListener("click", function () { pintar(a.dataset.ir); }); });
+    pintar("c1");
   })();
 </script>
 </body>
