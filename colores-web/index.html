@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Colores de la página · DSL Orchids</title>
+<link rel="icon" href="../marca-final/img/logo-dsl-oro-rosa.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;600;700;800&display=swap">
+<style>
+  :root { --bg: #faf6ef; --surface: #fffdf9; --line: #e6dccd; --ink: #2a2320; --ink2: #5c524b; --acento: #85503b; --oro: #ddb096;
+    --display: "Cormorant Garamond", Georgia, serif; --body: "Manrope", system-ui, sans-serif; color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.55; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.08; margin: 0; text-wrap: balance; }
+  p { margin: 0; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
+  header { background: #f1e7d8; padding-block: 40px 34px; border-bottom: 1px solid var(--line); }
+  header .wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; }
+  .eb { font-size: .74rem; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: #77562c; }
+  header h1 { font-size: 3rem; margin-top: 8px; }
+  header p { color: var(--ink2); margin-top: 12px; max-width: 60ch; }
+  header img { width: 100%; max-width: 420px; justify-self: end; }
+  section { padding-block: 44px; border-bottom: 1px solid var(--line); }
+  .head { display: grid; gap: 6px; margin-bottom: 22px; max-width: 74ch; }
+  h2 { font-size: 2.2rem; }
+  .muted { color: var(--ink2); }
+  .pasos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .paso { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; font-size: .94rem; }
+  .paso b { display: block; font-family: var(--display); font-size: 1.45rem; font-weight: 600; margin-bottom: 4px; }
+  .opciones { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .opcion { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 14px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+  .opcion.actual { background: #f4efe8; }
+  .opcion h3 { font-size: 1.6rem; }
+  .tag { align-self: flex-start; font-size: .7rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; padding: 4px 10px; border-radius: 99px; background: #efe4d3; color: #77562c; }
+  .actual .tag { background: #e7dfd6; color: #5c524b; }
+  .muestras { display: flex; gap: 6px; }
+  .muestras span { flex: 1; height: 26px; border-radius: 8px; border: 1px solid rgba(0,0,0,.08); }
+  .movil { width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--line); display: block; cursor: zoom-in; }
+  .btns { display: grid; gap: 8px; margin-top: auto; }
+  .btns a { display: flex; align-items: center; justify-content: center; min-height: 44px; text-decoration: none; font-weight: 700; font-size: .88rem; border-radius: 99px; padding: 8px 14px; }
+  .btns a.p { background: var(--oro); color: var(--ink); }
+  .btns a.s { border: 1px solid var(--line); background: #fff; color: var(--ink); }
+  .btns a:hover { filter: brightness(.96); }
+  .completas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+  figure { margin: 0; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  figcaption { font-size: .86rem; color: var(--ink2); font-weight: 600; }
+  .alto { height: 620px; overflow: hidden; border-radius: 12px; border: 1px solid var(--line); cursor: zoom-in; }
+  .alto img { width: 100%; display: block; }
+  .ficha { width: 100%; border-radius: 12px; border: 1px solid var(--line); display: block; cursor: zoom-in; }
+  ul.lista { margin: 0; padding-left: 1.1em; display: grid; gap: 8px; }
+  .nota { border-left: 4px solid var(--oro); background: var(--surface); border-radius: 0 12px 12px 0; padding: 12px 16px; font-size: .94rem; margin-top: 18px; }
+  .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .dos > * { min-width: 0; }
+  footer { padding-block: 28px; color: var(--ink2); font-size: .86rem; }
+  .zoom { position: fixed; inset: 0; z-index: 100; background: rgba(20,14,16,.92); display: flex; align-items: flex-start; justify-content: center; overflow: auto; padding: max(60px, env(safe-area-inset-top, 0px)) 16px 20px; cursor: zoom-out; }
+  .zoom[hidden] { display: none; }
+  .zoom img { max-width: min(1300px, 100%); height: auto; border-radius: 8px; }
+  .zoom button { position: fixed; top: max(12px, env(safe-area-inset-top, 0px)); right: max(12px, env(safe-area-inset-right, 0px)); width: 46px; height: 46px; border-radius: 50%; border: 0; background: #fff; font-size: 26px; cursor: pointer; }
+  body.sin-scroll { overflow: hidden; }
+  @media (max-width: 980px) { .opciones, .completas { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 760px) { header .wrap, .pasos, .dos { grid-template-columns: 1fr; } header img { justify-self: start; } header h1 { font-size: 2.4rem; } }
+  @media (max-width: 520px) { .opciones, .completas { grid-template-columns: 1fr; } .alto { height: 520px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div>
+      <p class="eb">Página web · 26 de octubre</p>
+      <h1>Tres opciones de color, más claras</h1>
+      <p>Bajamos el café oscuro, como pidieron, y probamos tres combinaciones claras tomadas del logo: el beige y el oro rosa de las letras, el rosa pastel del final del dorado y el lila de la flor. La página es la misma en todas; solo cambian los colores. A la izquierda está la actual, para comparar.</p>
+    </div>
+    <img src="../marca-final/img/logo-dsl-oro-rosa.png" alt="DSL International Orchids">
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap">
+    <div class="pasos">
+      <div class="paso"><b>1. Ábranla en vivo</b>Cada opción tiene su botón. Se abre la tienda completa con esos colores, en el celular o en el computador.</div>
+      <div class="paso"><b>2. Cambien de color allí mismo</b>Abajo a la izquierda de la tienda hay un botón <strong>Colores</strong> para pasar de una opción a otra sin salir de la página.</div>
+      <div class="paso"><b>3. Español o inglés</b>Arriba a la derecha está <strong>ES / EN</strong>. Si el celular está en inglés, la página abre sola en inglés.</div>
+    </div>
+  </div>
+</section>
+
+<section id="opciones">
+  <div class="wrap">
+    <div class="head">
+      <p class="eb">Las opciones</p>
+      <h2>Elijan la que más les guste</h2>
+      <p class="muted">Pueden pedir mezclas, por ejemplo el fondo de una con los botones de otra. Ajustamos hasta que les guste.</p>
+    </div>
+    <div class="opciones">
+      <article class="opcion actual">
+        <span class="tag">Actual</span>
+        <h3>Café oscuro</h3>
+        <div class="muestras" aria-hidden="true"><span style="background:#f7f2ea"></span><span style="background:#3a2a2e"></span><span style="background:#8a4a34"></span><span style="background:#d29a7e"></span></div>
+        <img class="movil" src="img/actual-movil.jpg" alt="Inicio en celular con la versión actual, de fondo café oscuro" data-zoom="img/actual-inicio.jpg">
+        <div class="btns">
+          <a class="s" href="https://dsl-orchids-colombia.vercel.app/?tema=actual&amp;lang=es">Ver en vivo</a>
+        </div>
+      </article>
+      <article class="opcion">
+        <span class="tag">Opción A</span>
+        <h3>Beige y oro rosa</h3>
+        <div class="muestras" aria-hidden="true"><span style="background:#f8f3ea"></span><span style="background:#efe4d3"></span><span style="background:#e7d8c2"></span><span style="background:#ddb096"></span></div>
+        <img class="movil" src="img/a-movil.jpg" alt="Inicio en celular con la opción A, beige y oro rosa" data-zoom="img/a-inicio.jpg">
+        <div class="btns">
+          <a class="p" href="https://dsl-orchids-colombia.vercel.app/?tema=a&amp;lang=es">Ver en vivo (español)</a>
+          <a class="s" href="https://dsl-orchids-colombia.vercel.app/?tema=a&amp;lang=en">View live (English)</a>
+        </div>
+      </article>
+      <article class="opcion">
+        <span class="tag">Opción B</span>
+        <h3>Rosa pastel</h3>
+        <div class="muestras" aria-hidden="true"><span style="background:#fdf8f6"></span><span style="background:#f8eae5"></span><span style="background:#f2dcd5"></span><span style="background:#e8b7a8"></span></div>
+        <img class="movil" src="img/b-movil.jpg" alt="Inicio en celular con la opción B, rosa pastel" data-zoom="img/b-inicio.jpg">
+        <div class="btns">
+          <a class="p" href="https://dsl-orchids-colombia.vercel.app/?tema=b&amp;lang=es">Ver en vivo (español)</a>
+          <a class="s" href="https://dsl-orchids-colombia.vercel.app/?tema=b&amp;lang=en">View live (English)</a>
+        </div>
+      </article>
+      <article class="opcion">
+        <span class="tag">Opción C</span>
+        <h3>Lila de la orquídea</h3>
+        <div class="muestras" aria-hidden="true"><span style="background:#fbf9fc"></span><span style="background:#f2eaf4"></span><span style="background:#e8dcec"></span><span style="background:#cda8d6"></span></div>
+        <img class="movil" src="img/c-movil.jpg" alt="Inicio en celular con la opción C, lila" data-zoom="img/c-inicio.jpg">
+        <div class="btns">
+          <a class="p" href="https://dsl-orchids-colombia.vercel.app/?tema=c&amp;lang=es">Ver en vivo (español)</a>
+          <a class="s" href="https://dsl-orchids-colombia.vercel.app/?tema=c&amp;lang=en">View live (English)</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="completas">
+  <div class="wrap">
+    <div class="head">
+      <p class="eb">En computador</p>
+      <h2>La página de inicio completa</h2>
+      <p class="muted">Toquen una imagen para verla grande y recorrerla de arriba abajo: portada, variedades, productos, la franja para empresas y el pie de página.</p>
+    </div>
+    <div class="completas">
+      <figure><div class="alto" data-zoom="img/actual-inicio.jpg"><img src="img/actual-inicio.jpg" alt="Inicio completo, versión actual" loading="lazy"></div><figcaption>Actual · café oscuro</figcaption></figure>
+      <figure><div class="alto" data-zoom="img/a-inicio.jpg"><img src="img/a-inicio.jpg" alt="Inicio completo, opción A" loading="lazy"></div><figcaption>A · Beige y oro rosa</figcaption></figure>
+      <figure><div class="alto" data-zoom="img/b-inicio.jpg"><img src="img/b-inicio.jpg" alt="Inicio completo, opción B" loading="lazy"></div><figcaption>B · Rosa pastel</figcaption></figure>
+      <figure><div class="alto" data-zoom="img/c-inicio.jpg"><img src="img/c-inicio.jpg" alt="Inicio completo, opción C" loading="lazy"></div><figcaption>C · Lila de la orquídea</figcaption></figure>
+    </div>
+    <div class="completas" style="margin-top:18px">
+      <figure><img class="ficha" src="img/actual-ficha.jpg" alt="Ficha de producto, versión actual" data-zoom="img/actual-ficha.jpg" loading="lazy"><figcaption>Ficha de producto · actual</figcaption></figure>
+      <figure><img class="ficha" src="img/a-ficha.jpg" alt="Ficha de producto, opción A" data-zoom="img/a-ficha.jpg" loading="lazy"><figcaption>Ficha · A</figcaption></figure>
+      <figure><img class="ficha" src="img/b-ficha.jpg" alt="Ficha de producto, opción B" data-zoom="img/b-ficha.jpg" loading="lazy"><figcaption>Ficha · B</figcaption></figure>
+      <figure><img class="ficha" src="img/c-ficha.jpg" alt="Ficha de producto, opción C" data-zoom="img/c-ficha.jpg" loading="lazy"><figcaption>Ficha · C</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="novedades">
+  <div class="wrap dos">
+    <div>
+      <div class="head">
+        <p class="eb">También nuevo</p>
+        <h2>Español e inglés, y Colombia o Estados Unidos</h2>
+      </div>
+      <ul class="lista">
+        <li>Toda la tienda está en <strong>español e inglés</strong>: menús, catálogo, fichas, carrito, pago, cotización, cuenta y páginas legales.</li>
+        <li>La página abre en el idioma del celular o del computador de cada cliente, y se puede cambiar con <strong>ES / EN</strong>. La elección se recuerda.</li>
+        <li>Arriba hay un selector <strong>Colombia / Estados Unidos</strong>. Estados Unidos lleva a dslorchids.com, la página actual de Miami.</li>
+        <li>El logo nuevo quedó sin recuadro, así que se ve limpio sobre cualquiera de los colores.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="head">
+        <p class="eb">Lo que sigue</p>
+        <h2>Pendiente de ustedes</h2>
+      </div>
+      <ul class="lista">
+        <li>Elegir el color (o pedir ajustes).</li>
+        <li>Las correcciones a las descripciones de los productos que van a enviar. Las aplicamos en español e inglés.</li>
+        <li>Precios, medio de pago y tarifas de envío. Por ahora la tienda está en modo de prueba: los precios aparecen en $0 y no se cobra nada.</li>
+      </ul>
+      <p class="nota">Cuando elijan el color, el mismo diseño se pasa a dslorchids.com para que las dos páginas se vean como una sola marca.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">DSL International Orchids · Página de revisión, no indexada.</div>
+</footer>
+
+<div class="zoom" hidden role="dialog" aria-label="Imagen ampliada">
+  <button type="button" aria-label="Cerrar">×</button>
+  <img alt="">
+</div>
+<script>
+  const zoom = document.querySelector(".zoom");
+  const zimg = zoom.querySelector("img");
+  document.querySelectorAll("[data-zoom]").forEach((el) => {
+    el.addEventListener("click", () => {
+      zimg.src = el.dataset.zoom;
+      zimg.alt = (el.querySelector("img") || el).alt || "";
+      zoom.hidden = false; zoom.scrollTop = 0; document.body.classList.add("sin-scroll");
+    });
+  });
+  const cerrar = () => { zoom.hidden = true; document.body.classList.remove("sin-scroll"); };
+  zoom.addEventListener("click", cerrar);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") cerrar(); });
+</script>
+</body>
+</html>
