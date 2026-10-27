@@ -27,12 +27,10 @@
   .head { display: grid; gap: 6px; margin-bottom: 22px; max-width: 74ch; }
   h2 { font-size: 2.2rem; }
   .muted { color: var(--ink2); }
-  .avatares { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+  .avatares { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
   .av { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
-  .av.actual { background: #f4efe8; }
   .av h3 { font-size: 1.5rem; }
   .tag { align-self: flex-start; font-size: .7rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; padding: 4px 10px; border-radius: 99px; background: #efe4d3; color: var(--cafe); }
-  .actual .tag { background: #e7dfd6; color: var(--ink2); }
   .tag.reco { background: #e3efe6; color: #2f6a43; }
   .circ { border-radius: 50%; display: block; border: 1px solid rgba(0,0,0,.08); background: #fff; }
   .grande { width: 100%; max-width: 190px; aspect-ratio: 1; height: auto; margin: 0 auto; }
@@ -60,7 +58,7 @@
   .zoom img { max-width: min(520px, 100%); height: auto; border-radius: 16px; }
   .zoom button { position: fixed; top: max(12px, env(safe-area-inset-top, 0px)); right: max(12px, env(safe-area-inset-right, 0px)); width: 46px; height: 46px; border-radius: 50%; border: 0; background: #fff; font-size: 26px; cursor: pointer; }
   body.sin-scroll { overflow: hidden; }
-  @media (max-width: 1100px) { .avatares { grid-template-columns: repeat(3, minmax(0, 1fr)); } .redes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 1100px) { .avatares { grid-template-columns: repeat(2, minmax(0, 1fr)); } .redes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 760px) { header .wrap { grid-template-columns: 1fr; } header img { justify-self: start; } header h1 { font-size: 2.4rem; } .avatares { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 480px) { .avatares { grid-template-columns: 1fr; } }
 </style>
@@ -71,7 +69,7 @@
     <div>
       <p class="eb">DSL International Orchids · Redes sociales</p>
       <h1>Así se vería el logo nuevo en sus redes</h1>
-      <p>Instagram, Facebook, TikTok y WhatsApp muestran la foto de perfil en un círculo pequeño. El logo completo es muy ancho para ese espacio, así que armamos versiones compactas con las mismas piezas del logo aprobado: la orquídea y las letras DSL en oro rosa. A la izquierda está la foto de perfil actual, para comparar.</p>
+      <p>Instagram, Facebook, TikTok y WhatsApp muestran la foto de perfil en un círculo pequeño. El logo completo es muy ancho para ese espacio, así que armamos versiones compactas con las mismas piezas del logo aprobado: la orquídea y las letras DSL en oro rosa.</p>
     </div>
     <img src="../marca-final/img/logo-dsl-oro-rosa.png" alt="Logo aprobado DSL International Orchids en oro rosa">
   </div>
@@ -84,13 +82,6 @@
       <p class="muted">Cada una se ve en grande y en los tamaños reales de las apps: comentarios, chats y notificaciones.</p>
     </div>
     <div class="avatares">
-      <article class="av actual">
-        <span class="tag">Actual</span>
-        <h3>Sello violeta</h3>
-        <img class="circ grande" src="img/av-actual.png" alt="Foto de perfil actual: sello DSL Int'l Orchids violeta">
-        <div class="chicos"><span><img class="circ" src="img/av-actual.png" width="56" height="56" alt="">56 px</span><span><img class="circ" src="img/av-actual.png" width="32" height="32" alt="">32 px</span></div>
-        <p>El sello que usan hoy.</p>
-      </article>
       <article class="av">
         <span class="tag reco">Opción A · recomendada</span>
         <h3>Flor + DSL, claro</h3>
@@ -130,7 +121,6 @@
       <p class="muted">Elija una opción para cambiar las cuatro pantallas. Son maquetas de ejemplo: las cifras van con guion y la descripción del perfil es un texto de muestra.</p>
     </div>
     <div class="pills" role="group" aria-label="Foto de perfil">
-      <button type="button" data-av="actual" aria-pressed="false"><img class="circ" src="img/av-actual.png" alt="">Actual</button>
       <button type="button" data-av="flor-dsl" aria-pressed="true"><img class="circ" src="img/av-flor-dsl.png" alt="">A · Flor + DSL claro</button>
       <button type="button" data-av="flor-dsl-oscuro" aria-pressed="false"><img class="circ" src="img/av-flor-dsl-oscuro.png" alt="">B · Flor + DSL oscuro</button>
       <button type="button" data-av="flor" aria-pressed="false"><img class="circ" src="img/av-flor.png" alt="">C · Solo la flor</button>
