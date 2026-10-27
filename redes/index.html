@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Logo en redes · DSL Orchids</title>
+<link rel="icon" href="../marca-final/img/logo-dsl-oro-rosa.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;600;700;800&display=swap">
+<style>
+  :root { --bg: #faf6ef; --surface: #fffdf9; --line: #e6dccd; --ink: #2a2320; --ink2: #5c524b; --oro: #ddb096; --cafe: #77562c;
+    --display: "Cormorant Garamond", Georgia, serif; --body: "Manrope", system-ui, sans-serif; color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.55; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.08; margin: 0; text-wrap: balance; }
+  p { margin: 0; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
+  header { background: #f1e7d8; padding-block: 40px 34px; border-bottom: 1px solid var(--line); }
+  header .wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; }
+  .eb { font-size: .74rem; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: var(--cafe); }
+  header h1 { font-size: 3rem; margin-top: 8px; }
+  header p { color: var(--ink2); margin-top: 12px; max-width: 60ch; }
+  header img { width: 100%; max-width: 420px; justify-self: end; }
+  section { padding-block: 44px; border-bottom: 1px solid var(--line); }
+  .head { display: grid; gap: 6px; margin-bottom: 22px; max-width: 74ch; }
+  h2 { font-size: 2.2rem; }
+  .muted { color: var(--ink2); }
+  .avatares { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+  .av { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+  .av.actual { background: #f4efe8; }
+  .av h3 { font-size: 1.5rem; }
+  .tag { align-self: flex-start; font-size: .7rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; padding: 4px 10px; border-radius: 99px; background: #efe4d3; color: var(--cafe); }
+  .actual .tag { background: #e7dfd6; color: var(--ink2); }
+  .tag.reco { background: #e3efe6; color: #2f6a43; }
+  .circ { border-radius: 50%; display: block; border: 1px solid rgba(0,0,0,.08); background: #fff; }
+  .grande { width: 100%; max-width: 190px; aspect-ratio: 1; height: auto; margin: 0 auto; }
+  .chicos { display: flex; align-items: center; gap: 12px; justify-content: center; font-size: .78rem; color: var(--ink2); }
+  .chicos span { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .av p { font-size: .9rem; color: var(--ink2); }
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .pills button { font: inherit; font-weight: 700; font-size: .9rem; min-height: 44px; padding: 8px 16px; border-radius: 99px; border: 1px solid var(--line); background: #fff; color: var(--ink); cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+  .pills button img { width: 26px; height: 26px; }
+  .pills button[aria-pressed="true"] { background: var(--oro); border-color: var(--oro); }
+  .redes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  figure { margin: 0; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  figcaption { font-size: .9rem; font-weight: 700; }
+  .tel { width: 100%; height: auto; border-radius: 22px; border: 1px solid var(--line); display: block; cursor: zoom-in; background: #fff; }
+  .portada { width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); display: block; }
+  .zona { position: relative; }
+  .zona::after { content: ""; position: absolute; top: 0; bottom: 0; left: 16.2%; right: 16.2%; border: 2px dashed rgba(42,35,32,.55); border-radius: 6px; pointer-events: none; }
+  ul.lista { margin: 0; padding-left: 1.1em; display: grid; gap: 8px; }
+  .nota { border-left: 4px solid var(--oro); background: var(--surface); border-radius: 0 12px 12px 0; padding: 12px 16px; font-size: .94rem; margin-top: 18px; }
+  .descargas { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+  .descargas a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 16px; border-radius: 99px; border: 1px solid var(--line); background: #fff; color: var(--ink); text-decoration: none; font-weight: 700; font-size: .88rem; }
+  footer { padding-block: 28px; color: var(--ink2); font-size: .86rem; }
+  .zoom { position: fixed; inset: 0; z-index: 100; background: rgba(20,14,16,.92); display: flex; align-items: flex-start; justify-content: center; overflow: auto; padding: max(60px, env(safe-area-inset-top, 0px)) 16px 20px; cursor: zoom-out; }
+  .zoom[hidden] { display: none; }
+  .zoom img { max-width: min(520px, 100%); height: auto; border-radius: 16px; }
+  .zoom button { position: fixed; top: max(12px, env(safe-area-inset-top, 0px)); right: max(12px, env(safe-area-inset-right, 0px)); width: 46px; height: 46px; border-radius: 50%; border: 0; background: #fff; font-size: 26px; cursor: pointer; }
+  body.sin-scroll { overflow: hidden; }
+  @media (max-width: 1100px) { .avatares { grid-template-columns: repeat(3, minmax(0, 1fr)); } .redes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 760px) { header .wrap { grid-template-columns: 1fr; } header img { justify-self: start; } header h1 { font-size: 2.4rem; } .avatares { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 480px) { .avatares { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div>
+      <p class="eb">DSL International Orchids · Redes sociales</p>
+      <h1>Así se vería el logo nuevo en sus redes</h1>
+      <p>Instagram, Facebook, TikTok y WhatsApp muestran la foto de perfil en un círculo pequeño. El logo completo es muy ancho para ese espacio, así que armamos versiones compactas con las mismas piezas del logo aprobado: la orquídea y las letras DSL en oro rosa. A la izquierda está la foto de perfil actual, para comparar.</p>
+    </div>
+    <img src="../marca-final/img/logo-dsl-oro-rosa.png" alt="Logo aprobado DSL International Orchids en oro rosa">
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <h2>1. Opciones de foto de perfil</h2>
+      <p class="muted">Cada una se ve en grande y en los tamaños reales de las apps: comentarios, chats y notificaciones.</p>
+    </div>
+    <div class="avatares">
+      <article class="av actual">
+        <span class="tag">Actual</span>
+        <h3>Sello violeta</h3>
+        <img class="circ grande" src="img/av-actual.png" alt="Foto de perfil actual: sello DSL Int'l Orchids violeta">
+        <div class="chicos"><span><img class="circ" src="img/av-actual.png" width="56" height="56" alt="">56 px</span><span><img class="circ" src="img/av-actual.png" width="32" height="32" alt="">32 px</span></div>
+        <p>El sello que usan hoy.</p>
+      </article>
+      <article class="av">
+        <span class="tag reco">Opción A · recomendada</span>
+        <h3>Flor + DSL, claro</h3>
+        <img class="circ grande" src="img/av-flor-dsl.png" alt="Opción A: orquídea y letras DSL en oro rosa sobre marfil">
+        <div class="chicos"><span><img class="circ" src="img/av-flor-dsl.png" width="56" height="56" alt="">56 px</span><span><img class="circ" src="img/av-flor-dsl.png" width="32" height="32" alt="">32 px</span></div>
+        <p>Se reconoce la marca y combina con la página nueva, que es clara.</p>
+      </article>
+      <article class="av">
+        <span class="tag">Opción B</span>
+        <h3>Flor + DSL, oscuro</h3>
+        <img class="circ grande" src="img/av-flor-dsl-oscuro.png" alt="Opción B: orquídea y letras DSL en oro rosa sobre fondo oscuro">
+        <div class="chicos"><span><img class="circ" src="img/av-flor-dsl-oscuro.png" width="56" height="56" alt="">56 px</span><span><img class="circ" src="img/av-flor-dsl-oscuro.png" width="32" height="32" alt="">32 px</span></div>
+        <p>El oro rosa resalta más y se ve elegante; destaca en el modo oscuro de las apps.</p>
+      </article>
+      <article class="av">
+        <span class="tag">Opción C</span>
+        <h3>Solo la flor</h3>
+        <img class="circ grande" src="img/av-flor.png" alt="Opción C: solo la orquídea del logo sobre marfil">
+        <div class="chicos"><span><img class="circ" src="img/av-flor.png" width="56" height="56" alt="">56 px</span><span><img class="circ" src="img/av-flor.png" width="32" height="32" alt="">32 px</span></div>
+        <p>La más limpia en tamaños pequeños, pero no dice el nombre.</p>
+      </article>
+      <article class="av">
+        <span class="tag">No recomendada</span>
+        <h3>Logo completo</h3>
+        <img class="circ grande" src="img/av-logo-completo.png" alt="Logo completo dentro del círculo: las letras quedan muy pequeñas">
+        <div class="chicos"><span><img class="circ" src="img/av-logo-completo.png" width="56" height="56" alt="">56 px</span><span><img class="circ" src="img/av-logo-completo.png" width="32" height="32" alt="">32 px</span></div>
+        <p>En el círculo las letras quedan muy pequeñas y no se leen.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <h2>2. Cómo se ve en cada red</h2>
+      <p class="muted">Elija una opción para cambiar las cuatro pantallas. Son maquetas de ejemplo: las cifras van con guion y la descripción del perfil es un texto de muestra.</p>
+    </div>
+    <div class="pills" role="group" aria-label="Foto de perfil">
+      <button type="button" data-av="actual" aria-pressed="false"><img class="circ" src="img/av-actual.png" alt="">Actual</button>
+      <button type="button" data-av="flor-dsl" aria-pressed="true"><img class="circ" src="img/av-flor-dsl.png" alt="">A · Flor + DSL claro</button>
+      <button type="button" data-av="flor-dsl-oscuro" aria-pressed="false"><img class="circ" src="img/av-flor-dsl-oscuro.png" alt="">B · Flor + DSL oscuro</button>
+      <button type="button" data-av="flor" aria-pressed="false"><img class="circ" src="img/av-flor.png" alt="">C · Solo la flor</button>
+    </div>
+    <div class="redes">
+      <figure><img class="tel" data-red="instagram" src="img/instagram-flor-dsl.jpg" alt="Perfil de Instagram de ejemplo"><figcaption>Instagram</figcaption></figure>
+      <figure><img class="tel" data-red="facebook" src="img/facebook-flor-dsl.jpg" alt="Página de Facebook de ejemplo"><figcaption>Facebook</figcaption></figure>
+      <figure><img class="tel" data-red="tiktok" src="img/tiktok-flor-dsl.jpg" alt="Perfil de TikTok de ejemplo"><figcaption>TikTok</figcaption></figure>
+      <figure><img class="tel" data-red="whatsapp" src="img/whatsapp-flor-dsl.jpg" alt="WhatsApp Business de ejemplo"><figcaption>WhatsApp Business</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <h2>3. Portada de Facebook</h2>
+      <p class="muted">Facebook es la única de las cuatro con imagen de portada. En celular solo se ve la parte del centro (la línea punteada), por eso el logo va ahí. Usa la misma foto de orquídea de la página web.</p>
+    </div>
+    <div class="zona"><img class="portada" src="img/portada-facebook.jpg" alt="Portada de Facebook con el logo en oro rosa y una vara de orquídea lila"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <h2>4. Para dejarlo listo</h2>
+    </div>
+    <ul class="lista">
+      <li>Elegir la foto de perfil (A, B o C) para usar la misma en todas las redes.</li>
+      <li>Confirmar el texto de la descripción del perfil; el que se ve en las maquetas es solo de ejemplo.</li>
+      <li>Facebook: la página existe pero nadie la administra todavía. Hay que recuperar el acceso para cambiar la foto y la portada.</li>
+      <li>Instagram, TikTok y WhatsApp Business: con el visto bueno, cambiamos la foto nosotros o se la dejamos lista para subir.</li>
+    </ul>
+    <div class="descargas">
+      <a href="img/descarga-avatar-flor-dsl-1080.png" download>Descargar opción A (1080 px)</a>
+      <a href="img/descarga-avatar-flor-dsl-oscuro-1080.png" download>Descargar opción B (1080 px)</a>
+      <a href="img/descarga-avatar-flor-1080.png" download>Descargar opción C (1080 px)</a>
+      <a href="img/descarga-portada-facebook-1640x624.jpg" download>Descargar portada de Facebook</a>
+    </div>
+    <p class="nota">Las fotos de perfil se suben cuadradas (1080 × 1080 px); cada red las recorta en círculo sola.</p>
+  </div>
+</section>
+
+<footer><div class="wrap">DSL International Orchids · Propuesta de redes, octubre de 2026.</div></footer>
+
+<div class="zoom" hidden><button type="button" aria-label="Cerrar">×</button><img alt=""></div>
+<script>
+  const pills = document.querySelectorAll(".pills button");
+  const tels = document.querySelectorAll(".tel");
+  pills.forEach((b) => b.addEventListener("click", () => {
+    pills.forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+    tels.forEach((t) => { t.src = `img/${t.dataset.red}-${b.dataset.av}.jpg`; });
+  }));
+  const zoom = document.querySelector(".zoom");
+  const zimg = zoom.querySelector("img");
+  tels.forEach((t) => t.addEventListener("click", () => {
+    zimg.src = t.src; zimg.alt = t.alt;
+    zoom.hidden = false; zoom.scrollTop = 0; document.body.classList.add("sin-scroll");
+  }));
+  const cerrar = () => { zoom.hidden = true; document.body.classList.remove("sin-scroll"); };
+  zoom.addEventListener("click", cerrar);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") cerrar(); });
+</script>
+</body>
+</html>
