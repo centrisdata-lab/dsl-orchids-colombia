@@ -212,6 +212,22 @@
   const cerrar = () => { zoom.hidden = true; document.body.classList.remove("sin-scroll"); };
   zoom.addEventListener("click", cerrar);
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") cerrar(); });
+
+  // El prototipo se "duerme" tras unos minutos sin visitas; se despierta mientras se lee esta página
+  // para que "Ver en vivo" abra al instante.
+  const PROTO = "https://dsl-orchids-colombia.vercel.app/";
+  let ultimo = 0;
+  const despertar = () => {
+    if (Date.now() - ultimo < 60000) return;
+    ultimo = Date.now();
+    fetch(PROTO, { mode: "no-cors", cache: "no-store", credentials: "omit" }).catch(() => {});
+  };
+  despertar();
+  document.querySelectorAll('a[href^="' + PROTO + '"]').forEach((a) => {
+    a.addEventListener("pointerenter", despertar);
+    a.addEventListener("touchstart", despertar, { passive: true });
+  });
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) despertar(); });
 </script>
 </body>
 </html>
