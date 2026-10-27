@@ -30,7 +30,7 @@
   .pasos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
   .paso { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; font-size: .94rem; }
   .paso b { display: block; font-family: var(--display); font-size: 1.45rem; font-weight: 600; margin-bottom: 4px; }
-  .opciones { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .opciones { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
   .opcion { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 14px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
   .opcion.actual { background: #f4efe8; }
   .opcion h3 { font-size: 1.6rem; }
@@ -44,7 +44,7 @@
   .btns a.p { background: var(--oro); color: var(--ink); }
   .btns a.s { border: 1px solid var(--line); background: #fff; color: var(--ink); }
   .btns a:hover { filter: brightness(.96); }
-  .completas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+  .completas { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
   figure { margin: 0; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
   figcaption { font-size: .86rem; color: var(--ink2); font-weight: 600; }
   .alto { height: 620px; overflow: hidden; border-radius: 12px; border: 1px solid var(--line); cursor: zoom-in; }
@@ -60,6 +60,7 @@
   .zoom img { max-width: min(1300px, 100%); height: auto; border-radius: 8px; }
   .zoom button { position: fixed; top: max(12px, env(safe-area-inset-top, 0px)); right: max(12px, env(safe-area-inset-right, 0px)); width: 46px; height: 46px; border-radius: 50%; border: 0; background: #fff; font-size: 26px; cursor: pointer; }
   body.sin-scroll { overflow: hidden; }
+  @media (max-width: 1180px) { .opciones, .completas { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   @media (max-width: 980px) { .opciones, .completas { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 760px) { header .wrap, .pasos, .dos { grid-template-columns: 1fr; } header img { justify-self: start; } header h1 { font-size: 2.4rem; } }
   @media (max-width: 520px) { .opciones, .completas { grid-template-columns: 1fr; } .alto { height: 520px; } }
@@ -71,7 +72,7 @@
     <div>
       <p class="eb">Página web · 26 de octubre</p>
       <h1>Tres opciones de color, más claras</h1>
-      <p>Bajamos el café oscuro, como pidieron, y probamos tres combinaciones claras tomadas del logo: el beige y el oro rosa de las letras, el rosa pastel del final del dorado y el lila de la flor. La página es la misma en todas; solo cambian los colores. A la izquierda está la actual, para comparar.</p>
+      <p>Bajamos el café oscuro, como pidieron, y probamos cuatro combinaciones claras tomadas del logo: el beige y el oro rosa de las letras, el rosa pastel del final del dorado, el lila de la flor y una más en marfil con dorado champaña. La página es la misma en todas; solo cambian los colores. A la izquierda está la actual, para comparar.</p>
     </div>
     <img src="../marca-final/img/logo-dsl-oro-rosa.png" alt="DSL International Orchids">
   </div>
@@ -111,8 +112,8 @@
         <div class="muestras" aria-hidden="true"><span style="background:#f8f3ea"></span><span style="background:#efe4d3"></span><span style="background:#e7d8c2"></span><span style="background:#ddb096"></span></div>
         <img class="movil" src="img/a-movil.jpg" alt="Inicio en celular con la opción A, beige y oro rosa" data-zoom="img/a-inicio.jpg">
         <div class="btns">
-          <a class="p" href="https://dsl-orchids-colombia.vercel.app/?tema=a&amp;lang=es&amp;pais=co">Tienda Colombia (español)</a>
-          <a class="s" href="https://dsl-orchids-colombia.vercel.app/?tema=a&amp;lang=en&amp;pais=us">Tienda EE. UU. (inglés)</a>
+          <a class="p" href="https://dsl-orchids-colombia.vercel.app/?tema=a&amp;lang=es&amp;pais=co">Colombia (español)</a>
+          <a class="s" href="https://dsl-orchids-colombia.vercel.app/?tema=a&amp;lang=en&amp;pais=us">EE. UU. (inglés)</a>
         </div>
       </article>
       <article class="opcion">
@@ -121,8 +122,8 @@
         <div class="muestras" aria-hidden="true"><span style="background:#fdf8f6"></span><span style="background:#f8eae5"></span><span style="background:#f2dcd5"></span><span style="background:#e8b7a8"></span></div>
         <img class="movil" src="img/b-movil.jpg" alt="Inicio en celular con la opción B, rosa pastel" data-zoom="img/b-inicio.jpg">
         <div class="btns">
-          <a class="p" href="https://dsl-orchids-colombia.vercel.app/?tema=b&amp;lang=es&amp;pais=co">Tienda Colombia (español)</a>
-          <a class="s" href="https://dsl-orchids-colombia.vercel.app/?tema=b&amp;lang=en&amp;pais=us">Tienda EE. UU. (inglés)</a>
+          <a class="p" href="https://dsl-orchids-colombia.vercel.app/?tema=b&amp;lang=es&amp;pais=co">Colombia (español)</a>
+          <a class="s" href="https://dsl-orchids-colombia.vercel.app/?tema=b&amp;lang=en&amp;pais=us">EE. UU. (inglés)</a>
         </div>
       </article>
       <article class="opcion">
@@ -131,8 +132,18 @@
         <div class="muestras" aria-hidden="true"><span style="background:#fbf9fc"></span><span style="background:#f2eaf4"></span><span style="background:#e8dcec"></span><span style="background:#cda8d6"></span></div>
         <img class="movil" src="img/c-movil.jpg" alt="Inicio en celular con la opción C, lila" data-zoom="img/c-inicio.jpg">
         <div class="btns">
-          <a class="p" href="https://dsl-orchids-colombia.vercel.app/?tema=c&amp;lang=es&amp;pais=co">Tienda Colombia (español)</a>
-          <a class="s" href="https://dsl-orchids-colombia.vercel.app/?tema=c&amp;lang=en&amp;pais=us">Tienda EE. UU. (inglés)</a>
+          <a class="p" href="https://dsl-orchids-colombia.vercel.app/?tema=c&amp;lang=es&amp;pais=co">Colombia (español)</a>
+          <a class="s" href="https://dsl-orchids-colombia.vercel.app/?tema=c&amp;lang=en&amp;pais=us">EE. UU. (inglés)</a>
+        </div>
+      </article>
+      <article class="opcion">
+        <span class="tag">Opción D · nueva</span>
+        <h3>Marfil y dorado</h3>
+        <div class="muestras" aria-hidden="true"><span style="background:#fbf9f4"></span><span style="background:#f5efe2"></span><span style="background:#efe6d2"></span><span style="background:#d8bc78"></span></div>
+        <img class="movil" src="img/d-movil.jpg" alt="Inicio en celular con la opción D, marfil y dorado champaña" data-zoom="img/d-inicio.jpg">
+        <div class="btns">
+          <a class="p" href="https://dsl-orchids-colombia.vercel.app/?tema=d&amp;lang=es&amp;pais=co">Colombia (español)</a>
+          <a class="s" href="https://dsl-orchids-colombia.vercel.app/?tema=d&amp;lang=en&amp;pais=us">EE. UU. (inglés)</a>
         </div>
       </article>
     </div>
@@ -151,12 +162,14 @@
       <figure><div class="alto" data-zoom="img/a-inicio.jpg"><img src="img/a-inicio.jpg" alt="Inicio completo, opción A" loading="lazy"></div><figcaption>A · Beige y oro rosa</figcaption></figure>
       <figure><div class="alto" data-zoom="img/b-inicio.jpg"><img src="img/b-inicio.jpg" alt="Inicio completo, opción B" loading="lazy"></div><figcaption>B · Rosa pastel</figcaption></figure>
       <figure><div class="alto" data-zoom="img/c-inicio.jpg"><img src="img/c-inicio.jpg" alt="Inicio completo, opción C" loading="lazy"></div><figcaption>C · Lila de la orquídea</figcaption></figure>
+      <figure><div class="alto" data-zoom="img/d-inicio.jpg"><img src="img/d-inicio.jpg" alt="Inicio completo, opción D" loading="lazy"></div><figcaption>D · Marfil y dorado</figcaption></figure>
     </div>
     <div class="completas" style="margin-top:18px">
       <figure><img class="ficha" src="img/actual-ficha.jpg" alt="Ficha de producto, versión actual" data-zoom="img/actual-ficha.jpg" loading="lazy"><figcaption>Ficha de producto · actual</figcaption></figure>
       <figure><img class="ficha" src="img/a-ficha.jpg" alt="Ficha de producto, opción A" data-zoom="img/a-ficha.jpg" loading="lazy"><figcaption>Ficha · A</figcaption></figure>
       <figure><img class="ficha" src="img/b-ficha.jpg" alt="Ficha de producto, opción B" data-zoom="img/b-ficha.jpg" loading="lazy"><figcaption>Ficha · B</figcaption></figure>
       <figure><img class="ficha" src="img/c-ficha.jpg" alt="Ficha de producto, opción C" data-zoom="img/c-ficha.jpg" loading="lazy"><figcaption>Ficha · C</figcaption></figure>
+      <figure><img class="ficha" src="img/d-ficha.jpg" alt="Ficha de producto, opción D" data-zoom="img/d-ficha.jpg" loading="lazy"><figcaption>Ficha · D</figcaption></figure>
     </div>
   </div>
 </section>
