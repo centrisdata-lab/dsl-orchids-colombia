@@ -27,7 +27,7 @@
   .head { display: grid; gap: 6px; margin-bottom: 22px; max-width: 74ch; }
   h2 { font-size: 2.2rem; }
   .muted { color: var(--ink2); }
-  .avatares { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+  .avatares { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
   .av { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
   .av h3 { font-size: 1.5rem; }
   .tag { align-self: flex-start; font-size: .7rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; padding: 4px 10px; border-radius: 99px; background: #efe4d3; color: var(--cafe); }
@@ -58,9 +58,9 @@
   .zoom img { max-width: min(520px, 100%); height: auto; border-radius: 16px; }
   .zoom button { position: fixed; top: max(12px, env(safe-area-inset-top, 0px)); right: max(12px, env(safe-area-inset-right, 0px)); width: 46px; height: 46px; border-radius: 50%; border: 0; background: #fff; font-size: 26px; cursor: pointer; }
   body.sin-scroll { overflow: hidden; }
-  @media (max-width: 1100px) { .avatares { grid-template-columns: repeat(2, minmax(0, 1fr)); } .redes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 760px) { header .wrap { grid-template-columns: 1fr; } header img { justify-self: start; } header h1 { font-size: 2.4rem; } .avatares { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 480px) { .avatares { grid-template-columns: 1fr; } }
+  @media (max-width: 1100px) { .redes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 760px) { header .wrap { grid-template-columns: 1fr; } header img { justify-self: start; } header h1 { font-size: 2.4rem; } .avatares { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (max-width: 520px) { .avatares { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -83,32 +83,25 @@
     </div>
     <div class="avatares">
       <article class="av">
-        <span class="tag reco">Opción A · recomendada</span>
-        <h3>Flor + DSL, claro</h3>
+        <span class="tag">Opción A</span>
+        <h3>Flor + DSL</h3>
         <img class="circ grande" src="img/av-flor-dsl.png" alt="Opción A: orquídea y letras DSL en oro rosa sobre marfil">
         <div class="chicos"><span><img class="circ" src="img/av-flor-dsl.png" width="56" height="56" alt="">56 px</span><span><img class="circ" src="img/av-flor-dsl.png" width="32" height="32" alt="">32 px</span></div>
         <p>Se reconoce la marca y combina con la página nueva, que es clara.</p>
       </article>
       <article class="av">
         <span class="tag">Opción B</span>
-        <h3>Flor + DSL, oscuro</h3>
-        <img class="circ grande" src="img/av-flor-dsl-oscuro.png" alt="Opción B: orquídea y letras DSL en oro rosa sobre fondo oscuro">
-        <div class="chicos"><span><img class="circ" src="img/av-flor-dsl-oscuro.png" width="56" height="56" alt="">56 px</span><span><img class="circ" src="img/av-flor-dsl-oscuro.png" width="32" height="32" alt="">32 px</span></div>
-        <p>El oro rosa resalta más y se ve elegante; destaca en el modo oscuro de las apps.</p>
-      </article>
-      <article class="av">
-        <span class="tag">Opción C</span>
         <h3>Solo la flor</h3>
-        <img class="circ grande" src="img/av-flor.png" alt="Opción C: solo la orquídea del logo sobre marfil">
+        <img class="circ grande" src="img/av-flor.png" alt="Opción B: solo la orquídea del logo sobre marfil">
         <div class="chicos"><span><img class="circ" src="img/av-flor.png" width="56" height="56" alt="">56 px</span><span><img class="circ" src="img/av-flor.png" width="32" height="32" alt="">32 px</span></div>
         <p>La más limpia en tamaños pequeños, pero no dice el nombre.</p>
       </article>
       <article class="av">
-        <span class="tag">No recomendada</span>
+        <span class="tag">Opción C</span>
         <h3>Logo completo</h3>
         <img class="circ grande" src="img/av-logo-completo.png" alt="Logo completo dentro del círculo: las letras quedan muy pequeñas">
         <div class="chicos"><span><img class="circ" src="img/av-logo-completo.png" width="56" height="56" alt="">56 px</span><span><img class="circ" src="img/av-logo-completo.png" width="32" height="32" alt="">32 px</span></div>
-        <p>En el círculo las letras quedan muy pequeñas y no se leen.</p>
+        <p>Muestra el nombre completo, aunque en los tamaños pequeños las letras se ven muy chiquitas.</p>
       </article>
     </div>
   </div>
@@ -118,12 +111,11 @@
   <div class="wrap">
     <div class="head">
       <h2>2. Cómo se ve en cada red</h2>
-      <p class="muted">Elija una opción para cambiar las cuatro pantallas. Son maquetas de ejemplo: las cifras van con guion y la descripción del perfil es un texto de muestra.</p>
+      <p class="muted">Toque A o B para ver cómo queda en cada red. Son maquetas de ejemplo: las cifras van con guion y la descripción del perfil es un texto de muestra.</p>
     </div>
     <div class="pills" role="group" aria-label="Foto de perfil">
-      <button type="button" data-av="flor-dsl" aria-pressed="true"><img class="circ" src="img/av-flor-dsl.png" alt="">A · Flor + DSL claro</button>
-      <button type="button" data-av="flor-dsl-oscuro" aria-pressed="false"><img class="circ" src="img/av-flor-dsl-oscuro.png" alt="">B · Flor + DSL oscuro</button>
-      <button type="button" data-av="flor" aria-pressed="false"><img class="circ" src="img/av-flor.png" alt="">C · Solo la flor</button>
+      <button type="button" data-av="flor-dsl" aria-pressed="true"><img class="circ" src="img/av-flor-dsl.png" alt="">A · Flor + DSL</button>
+      <button type="button" data-av="flor" aria-pressed="false"><img class="circ" src="img/av-flor.png" alt="">B · Solo la flor</button>
     </div>
     <div class="redes">
       <figure><img class="tel" data-red="instagram" src="img/instagram-flor-dsl.jpg" alt="Perfil de Instagram de ejemplo"><figcaption>Instagram</figcaption></figure>
@@ -157,8 +149,8 @@
     </ul>
     <div class="descargas">
       <a href="img/descarga-avatar-flor-dsl-1080.png" download>Descargar opción A (1080 px)</a>
-      <a href="img/descarga-avatar-flor-dsl-oscuro-1080.png" download>Descargar opción B (1080 px)</a>
-      <a href="img/descarga-avatar-flor-1080.png" download>Descargar opción C (1080 px)</a>
+      <a href="img/descarga-avatar-flor-1080.png" download>Descargar opción B (1080 px)</a>
+      <a href="img/descarga-avatar-logo-completo-1080.png" download>Descargar opción C (1080 px)</a>
       <a href="img/descarga-portada-facebook-1640x624.jpg" download>Descargar portada de Facebook</a>
     </div>
     <p class="nota">Las fotos de perfil se suben cuadradas (1080 × 1080 px); cada red las recorta en círculo sola.</p>
